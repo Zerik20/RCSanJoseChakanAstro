@@ -1,0 +1,162 @@
+---
+const title = "Exclusivo Campo de Golf";
+const description = "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.";
+const buttonText = "Conoce más";
+const buttonLink = "/campo-de-golf";
+
+// Datos de las miniseciones
+const miniSections = [
+  {
+    imageUrl: '/img/CampoGolf/1.jpg',
+    phrase: '9 hoyos completos',
+  },
+  {
+    imageUrl: '/img/CampoGolf/2.jpg',
+    phrase: 'Campo iluminado',
+  },
+  {
+    imageUrl: '/img/CampoGolf/3.jpg',
+    phrase: 'Disponibilidad 24 hrs',
+  },
+  {
+    imageUrl: '/img/CampoGolf/4.jpg',
+    phrase: 'Lagos artificiales',
+  },
+];
+---
+
+<style>
+  .golf-section {
+    position: relative;
+    padding: 4rem 2rem;
+    background-image: url('/img/CampoGolf/CampoGolf.jpg'); /* Asegúrate de tener esta imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece un poco el fondo */
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold; /* Hacer el título más grueso */
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #007acc;
+  }
+
+  /* Estilos para las miniseciones */
+  .mini-section-container {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Para que las miniseciones se reorganicen en móvil */
+  }
+
+  .mini-section {
+    flex: 1 0 24%; /* Ocupa el 24% del ancho en pantallas grandes */
+    height: 200px; /* Altura ajustada para escritorio */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .mini-section .overlay {
+    background-color: rgba(0, 0, 0, 0.); /* Oscurece un poco el fondo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .mini-section h3 {
+    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+    z-index: 2;
+    margin: 0;
+  }
+  .mini-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Efecto de transición para el zoom */
+  }
+
+  .mini-section:hover img {
+    transform: scale(1.1); /* Zoom en la imagen al pasar el ratón */
+  }
+
+  @media (max-width: 768px) {
+    .mini-section {
+      flex: 1 0 100%; /* Ocupa todo el ancho en pantallas móviles */
+      height: 120px; /* Altura ajustada para móvil */
+      margin-bottom: 0; /* Elimina el espacio entre miniseciones en móvil */
+    }
+  }
+</style>
+
+<section class="golf-section">
+  <div class="overlay"></div>
+  <div class="content">
+    <h2>{title}</h2>
+    <br>
+    <br>
+    <p>{description}</p>
+    <br>
+    <br>
+    <a href={buttonLink} class="button">{buttonText}</a>
+  </div>
+</section>
+
+<div class="mini-section-container">
+  {miniSections.map(section => (
+    <div class="mini-section  " style={{ backgroundImage: `url(${section.imageUrl})` }}>
+      <div class="overlay"></div>
+      <h3>{section.phrase}</h3>
+    </div>
+  ))}
+</div>
