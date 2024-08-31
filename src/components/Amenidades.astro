@@ -1,249 +1,50 @@
----
-const title = "Amenidades";
-const subtitle = "Explora nuestras características destacadas";
-const miniSections = [
-  {
-    imageUrl: '/img/Fachada.jpg',
-    phrase: '9 hoyos completos',
-  },
-  {
-    imageUrl: '/img/logoblanco.png',
-    phrase: 'Campo iluminado',
-  },
-  {
-    imageUrl: '/img/Fachada.jpg',
-    phrase: 'Disponibilidad 24 hrs',
-  },
-  {
-    imageUrl: '/img/logoblanco.png',
-    phrase: 'Lagos artificiales',
-  },
-];
----
-
-<style>
-    /* Ajustes generales */
-    .slider-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-    }
-  
-    .text-container {
-      text-align: center;
-      z-index: 1;
-      margin-bottom: 2rem;
-    }
-  
-    .slider-title {
-      font-size: 3rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: #fff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-  
-    .slider-subtitle {
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-  
-    .background-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
-    }
-  
-    .background-animate {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: background-image 1s ease-in-out;
-    }
-  
-    .background-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(245, 245, 220, 0.6);
-      backdrop-filter: blur(8px);
-      z-index: 1;
-    }
-  
-    .mini-section-container {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      z-index: 2;
-    }
-  
-    .mini-section-wrapper {
-      display: flex;
-      width: 200%;
-      transition: transform 20s linear;
-      will-change: transform;
-    }
-  
-    .mini-section {
-      flex: 1 0 25%;
-      height: 350px; /* Aumento de altura */
-      position: relative;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-  
-    .mini-section img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-  
-    .mini-section:hover img {
-      transform: scale(1.1);
-    }
-  
-    .mini-section h3 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      text-align: center;
-      padding: 0.5rem;
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  
-    .slider-button, .contact-button {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-  
-    .slider-button:hover, .contact-button:hover {
-      background-color: #0056b3;
-    }
-  
-    @media (max-width: 768px) {
-      .slider-section {
-        height: 100vh;
-        padding: 1rem;
-      }
-  
-      .text-container {
-        margin-top: 3rem;
-      }
-  
-      .mini-section {
-        flex: 1 0 100%;
-        height: 50vw; /* Ajuste de altura para hacer el slider más grande */
-        max-height: 50vh;
-      }
-  
-      .slider-title {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-      }
-  
-      .slider-subtitle {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-      }
-  
-      .mini-section-wrapper {
-        animation: slide 10s linear infinite;
-      }
-  
-      .slider-button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        margin-top: 1.5rem;
-      }
-    }
-  </style>
-  
-  <section class="slider-section">
-    <div class="background-container">
-      <div class="background-animate"></div>
-      <div class="background-overlay"></div>
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/img/Fachada.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/img/Fachada.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/img/Fachada.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/img/Fachada.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/img/Fachada.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
     </div>
-    <div class="text-container">
-      <h2 class="slider-title">{title}</h2>
-      <p class="slider-subtitle">{subtitle}</p>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
-    <div class="mini-section-container">
-      <div class="mini-section-wrapper">
-        {miniSections.map(section => (
-          <div class="mini-section" style={{ backgroundImage: `url(${section.imageUrl})` }}>
-            <h3>{section.phrase}</h3>
-          </div>
-        ))}
-        {miniSections.map(section => (
-          <div class="mini-section" style={{ backgroundImage: `url(${section.imageUrl})` }}>
-            <h3>{section.phrase}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
-    <button class="slider-button">Ver más</button>
-    <button class="contact-button">Contacto</button> <!-- Botón de contacto añadido -->
-  </section>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const backgroundElement = document.querySelector('.background-animate');
-      const images = ['/img/Fachada.jpg', '/img/logoblanco.png', '/img/Fachada.jpg', '/img/logoblanco.png'];
-      let index = 0;
-  
-      const updateBackground = () => {
-        backgroundElement.style.backgroundImage = `url(${images[index]})`;
-      };
-  
-      const updateIndex = () => {
-        index = (index + 1) % images.length;
-        updateBackground();
-      };
-  
-      // Cambia la imagen de fondo cada 5 segundos
-      setInterval(updateIndex, 5000);
-      updateBackground(); // Llama a updateBackground() para asegurar que la primera imagen se muestre al cargar la página
-    });
-  </script>
-  
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
