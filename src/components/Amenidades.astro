@@ -4,83 +4,29 @@ const amenities = [
     name: "Amenidad 1",
     description: "Descripción breve de la amenidad 1.",
     image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
+    icon: "/icono1.svg",
   },
   {
     name: "Amenidad 2",
     description: "Descripción breve de la amenidad 2.",
     image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
+    icon: "/icono2.svg",
   },
   {
     name: "Amenidad 3",
     description: "Descripción breve de la amenidad 3.",
     image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
+    icon: "/icono3.svg",
   },
   // Agrega más amenidades según sea necesario, cada una con su propio icono
   {
     name: "Amenidad 13",
     description: "Descripción breve de la amenidad 13.",
     image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
-  },
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/LogoNegro.svg",
+    icon: "/icono13.svg",
   },
 ];
----
+---.
 
 <div class="relative w-full">
     <!-- Section Title with Light Background -->
@@ -106,21 +52,6 @@ const amenities = [
             ))}
         </div>
 
-        <!-- Slider indicators using different SVG icons with circular background -->
-        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-            {amenities.map((amenity, index) => (
-                <button
-                    type="button"
-                    class="w-12 h-12 rounded-full bg-white p-2 flex items-center justify-center border border-gray-300"
-                    aria-current={index === 0 ? 'true' : 'false'}
-                    aria-label={`Slide ${index + 1}`}
-                    data-carousel-slide-to={index}
-                >
-                    <img src={amenity.icon} alt={`Icono de ${amenity.name}`} class="w-8 h-8" />
-                </button>
-            ))}
-        </div>
-
         <!-- Slider controls -->
         <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-800/50 group-focus:ring-4 group-focus:ring-gray-800 group-focus:outline-none">
@@ -139,4 +70,59 @@ const amenities = [
             </span>
         </button>
     </div>
+
+    <!-- Desktop Indicators -->
+    <div class="hidden md:flex absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        {amenities.map((amenity, index) => (
+            <button
+                type="button"
+                class="w-12 h-12 rounded-full bg-white p-2 flex items-center justify-center border border-gray-300"
+                aria-current={index === 0 ? 'true' : 'false'}
+                aria-label={`Slide ${index + 1}`}
+                data-carousel-slide-to={index}
+            >
+                <img src={amenity.icon} alt={`Icono de ${amenity.name}`} class="w-8 h-8" />
+            </button>
+        ))}
+    </div>
+
+    <!-- Mobile Dropdown Indicator -->
+    <div class="md:hidden relative">
+        <button
+            id="amenities-menu-toggle"
+            class="block w-full py-2 px-4 text-center bg-gray-800 text-white rounded-md focus:outline-none"
+        >
+            Selecciona una amenidad
+        </button>
+        <div
+            id="amenities-menu"
+            class="absolute z-40 hidden w-full mt-2 bg-white shadow-lg rounded-md"
+        >
+            {amenities.map((amenity, index) => (
+                <button
+                    type="button"
+                    class="w-full flex items-center justify-between py-2 px-4 hover:bg-gray-100"
+                    aria-label={`Selecciona ${amenity.name}`}
+                    data-carousel-slide-to={index}
+                >
+                    <span class="text-gray-800">{amenity.name}</span>
+                    <img src={amenity.icon} alt={`Icono de ${amenity.name}`} class="w-6 h-6 bg-white p-1 rounded-full border border-gray-300" />
+                </button>
+            ))}
+        </div>
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.getElementById('amenities-menu-toggle');
+        const menu = document.getElementById('amenities-menu');
+    
+        if (toggleButton && menu) {
+            toggleButton.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    });
+    </script>
+    
