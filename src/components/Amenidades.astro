@@ -1,6 +1,4 @@
 ---
-// src/components/AmenitiesList.astro
-
 const amenities = [
   {
     name: "Amenidad 1",
@@ -8,82 +6,50 @@ const amenities = [
     image: "/img/Fachada.jpg",
     icon: "/img/Iconossvg/Golf.svg",
   },
-  {
-    name: "Amenidad 2",
-    description: "Descripción breve de la amenidad 2.",
-    image: "/img/Fachada.jpg",
-    icon: "/img/Iconossvg/Golf.svg",
-  },
-  {
-    name: "Amenidad 3",
-    description: "Descripción breve de la amenidad 3.",
-    image: "/img/Fachada.jpg",
-    icon: "/img/Iconossvg/Golf.svg",
-  },
-  // Agrega más amenidades según sea necesario
-  {
-    name: "Amenidad 13",
-    description: "Descripción breve de la amenidad 13.",
-    image: "/img/Fachada.jpg",
-    icon: "/img/Iconossvg/Golf.svg",
-  },
+  // ... (resto de las amenidades)
 ];
 ---
-
 <div class="bg-white p-6 rounded-lg shadow-md">
   <h2 class="text-2xl font-semibold mb-4">Amenidades del Residencial</h2>
-  <div class="relative flex flex-col md:flex-row">
-    <!-- Imagen Grande con Título y Descripción -->
-    <div class="w-full md:w-1/2 flex justify-center mb-4 md:mb-0">
+  <div class="relative flex flex-col">
+    <!-- Imagen Grande con Degradado en la Parte Inferior -->
+    <div class="w-full flex justify-center mb-4">
       <div class="relative w-full">
         <img id="main-image" src={amenities[0].image} alt="Amenidad seleccionada" class="w-full h-96 object-cover rounded-lg" />
-        <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 text-white p-4 flex flex-col justify-center items-center">
+        <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent text-white p-4 flex flex-col justify-end rounded-lg">
           <h3 id="image-title" class="text-2xl font-semibold">{amenities[0].name}</h3>
           <p id="image-description" class="mt-2 text-lg">{amenities[0].description}</p>
         </div>
       </div>
     </div>
 
-    <!-- Lista Vertical -->
-    <div class="w-full md:w-1/2 md:pl-6">
-      <!-- Botón para desplegar la lista en móviles -->
-      <button id="toggle-list" class="block md:hidden w-full py-2 px-4 bg-blue-500 text-white rounded-lg mb-4">
-        Mostrar Amenidades
-      </button>
+    <!-- Botón para desplegar la lista en móviles y modo escritorio -->
+    <button id="toggle-list" class="block w-full py-2 px-4 bg-blue-500 text-white rounded-lg mb-4 md:hidden">
+      Mostrar Amenidades
+    </button>
 
-      <ul id="amenities-list" class="w-full space-y-4 md:space-y-2 hidden md:block">
-        {amenities.map((amenity) => (
-          <li
-            key={amenity.name}
-            class="flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
-            data-image={amenity.image}
-            data-name={amenity.name}
-            data-description={amenity.description}
-          >
-            <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
-            <div>
-              <h3 class="text-lg font-semibold">{amenity.name}</h3>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <ul id="mobile-list" class="w-full space-y-4 md:hidden hidden">
-        {amenities.map((amenity) => (
-          <li
-            key={amenity.name}
-            class="flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
-            data-image={amenity.image}
-            data-name={amenity.name}
-            data-description={amenity.description}
-          >
-            <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
-            <div>
-              <h3 class="text-lg font-semibold">{amenity.name}</h3>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <!-- Botón para mostrar/ocultar la lista en modo escritorio -->
+    <button id="toggle-list-desktop" class="hidden md:block py-1 px-2 bg-blue-500 text-white rounded-lg mb-4 self-start">
+      Mostrar Amenidades
+    </button>
+
+    <!-- Lista Vertical -->
+    <ul id="amenities-list" class="w-full space-y-4 md:space-y-2 hidden">
+      {amenities.map((amenity) => (
+        <li
+          key={amenity.name}
+          class="flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
+          data-image={amenity.image}
+          data-name={amenity.name}
+          data-description={amenity.description}
+        >
+          <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
+          <div>
+            <h3 class="text-lg font-semibold">{amenity.name}</h3>
+          </div>
+        </li>
+      ))}
+    </ul>
   </div>
 
   <!-- Script para cambiar la imagen y mostrar/ocultar la lista -->
@@ -92,9 +58,10 @@ const amenities = [
       const mainImage = document.getElementById('main-image');
       const imageTitle = document.getElementById('image-title');
       const imageDescription = document.getElementById('image-description');
-      const listItems = document.querySelectorAll('#amenities-list li, #mobile-list li');
-      const mobileList = document.getElementById('mobile-list');
-      const toggleButton = document.getElementById('toggle-list');
+      const listItems = document.querySelectorAll('#amenities-list li');
+      const mobileToggleButton = document.getElementById('toggle-list');
+      const desktopToggleButton = document.getElementById('toggle-list-desktop');
+      const amenitiesList = document.getElementById('amenities-list');
 
       listItems.forEach(item => {
         item.addEventListener('click', function () {
@@ -107,14 +74,16 @@ const amenities = [
         });
       });
 
-      toggleButton.addEventListener('click', function () {
-        if (mobileList.classList.contains('hidden')) {
-          mobileList.classList.remove('hidden');
-          toggleButton.textContent = 'Ocultar Amenidades';
-        } else {
-          mobileList.classList.add('hidden');
-          toggleButton.textContent = 'Mostrar Amenidades';
-        }
+      mobileToggleButton.addEventListener('click', function () {
+        const isHidden = amenitiesList.classList.contains('hidden');
+        amenitiesList.classList.toggle('hidden', !isHidden);
+        mobileToggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
+      });
+
+      desktopToggleButton.addEventListener('click', function () {
+        const isHidden = amenitiesList.classList.contains('hidden');
+        amenitiesList.classList.toggle('hidden', !isHidden);
+        desktopToggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
       });
     });
   </script>
