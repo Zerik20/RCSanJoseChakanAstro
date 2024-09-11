@@ -1,21 +1,16 @@
 ---
-// Define los elementos del menú con las rutas de los íconos SVG y las URL de destino
 const menuItems = [
-    { name: 'NOSOTROS', icon: '/img/Iconossvg/Dashboard.svg', href: '#NOSOTROS' },
-    { name: 'CASAS EN PREVENTA', icon: '/img/Iconossvg/Settings.svg', href: '#MODELOS' },
-    { name: 'CAMPO DE GOLF', icon: '/img/Iconossvg/Settings.svg', href: '#CAMPODEGOLF' },
+    { name: 'NOSOTROS', icon: '/img/IconosMenu/About.svg', href: '#NOSOTROS' },
+    { name: 'CASAS EN PREVENTA', icon: '/img/IconosMenu/Casas.svg', href: '#MODELOS' },
+    { name: 'CAMPO DE GOLF', icon: '/img/IconosMenu/Golf.svg', href: '#CAMPODEGOLF' },
+    { name: 'AMENIDADES', icon: '/img/IconosMenu/Amenidades.svg', href: '#AMENIDADES' },
+    { name: 'CONTACTO', icon: '/img/IconosMenu/Contacto.svg', href: '#CONTACTO' },
 ];
-
-// Función para alternar el drawer
-function toggleDrawer() {
-    const drawer = document.getElementById('drawer-navigation');
-    drawer.classList.toggle('-translate-x-full');
-}
 ---
 
 <!-- Botón flotante siempre visible -->
 <div class="fixed top-4 right-4 z-50">
-    <button onClick={toggleDrawer} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+    <button id="menu-toggle" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
         Menu
     </button>
 </div>
@@ -26,9 +21,9 @@ function toggleDrawer() {
     <div class="py-4 overflow-y-auto">
         <ul class="space-y-2 font-medium">
             {menuItems.map(item => (
-                <li key={item.name}>
+                <li>
                     <a href={item.href} class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <img src={item.icon} alt={item.name} class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"/>
+                        <img src={item.icon} alt={item.name} class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
                         <span class="ms-3">{item.name}</span>
                     </a>
                 </li>
@@ -43,12 +38,20 @@ function toggleDrawer() {
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('button');
+        const toggleButton = document.getElementById('menu-toggle');
         const drawerNavigation = document.getElementById('drawer-navigation');
+        const menuLinks = document.querySelectorAll('#drawer-navigation a');
 
         if (toggleButton && drawerNavigation) {
             toggleButton.addEventListener('click', () => {
                 drawerNavigation.classList.toggle('-translate-x-full');
+            });
+
+            // Cerrar el drawer cuando se selecciona un enlace
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    drawerNavigation.classList.add('-translate-x-full');
+                });
             });
         }
     });
