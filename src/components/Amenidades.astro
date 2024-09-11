@@ -6,12 +6,58 @@ const amenities = [
     image: "/img/Fachada.jpg",
     icon: "/img/Iconossvg/Golf.svg",
   },
+  {
+    name: "Amenidad 2",
+    description: "Descripción breve de la amenidad 2.",
+    image: "/img/Amenidades/CampGolf.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 1",
+    description: "Descripción breve de la amenidad 1.",
+    image: "/img/Fachada.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 2",
+    description: "Descripción breve de la amenidad 2.",
+    image: "/img/Amenidades/CampGolf.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 1",
+    description: "Descripción breve de la amenidad 1.",
+    image: "/img/Fachada.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 2",
+    description: "Descripción breve de la amenidad 2.",
+    image: "/img/Amenidades/CampGolf.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 1",
+    description: "Descripción breve de la amenidad 1.",
+    image: "/img/Fachada.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
+  {
+    name: "Amenidad 2",
+    description: "Descripción breve de la amenidad 2.",
+    image: "/img/Amenidades/CampGolf.jpg",
+    icon: "/img/Iconossvg/Golf.svg",
+  },
   // ... (resto de las amenidades)
 ];
 ---
-<div class="bg-white p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-semibold mb-4">Amenidades del Residencial</h2>
-  <div class="relative flex flex-col">
+
+<div class="bg-white p-6 shadow-md" id="AMENIDADES">
+    <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative">
+      Amenidades del Residencial
+      <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
+    </h2>
+  
     <!-- Imagen Grande con Degradado en la Parte Inferior -->
     <div class="w-full flex justify-center mb-4">
       <div class="relative w-full">
@@ -22,36 +68,32 @@ const amenities = [
         </div>
       </div>
     </div>
-
-    <!-- Botón para desplegar la lista en móviles y modo escritorio -->
-    <button id="toggle-list" class="block w-full py-2 px-4 bg-blue-500 text-white rounded-lg mb-4 md:hidden">
+  
+    <!-- Botón para mostrar/ocultar la lista -->
+    <button id="toggle-list" class="block w-full py-2 px-4 bg-blue-500 text-white rounded-lg mb-4">
       Mostrar Amenidades
     </button>
-
-    <!-- Botón para mostrar/ocultar la lista en modo escritorio -->
-    <button id="toggle-list-desktop" class="hidden md:block py-1 px-2 bg-blue-500 text-white rounded-lg mb-4 self-start">
-      Mostrar Amenidades
-    </button>
-
-    <!-- Lista Vertical -->
-    <ul id="amenities-list" class="w-full space-y-4 md:space-y-2 hidden">
-      {amenities.map((amenity) => (
-        <li
-          key={amenity.name}
-          class="flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
-          data-image={amenity.image}
-          data-name={amenity.name}
-          data-description={amenity.description}
-        >
-          <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
-          <div>
-            <h3 class="text-lg font-semibold">{amenity.name}</h3>
-          </div>
-        </li>
-      ))}
-    </ul>
+  
+    <!-- Contenedor de Lista Horizontal -->
+    <div class="w-full overflow-x-auto hidden" id="amenities-list">
+      <ul class="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+        {amenities.map((amenity) => (
+          <li
+            class="flex-shrink-0 flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
+            data-image={amenity.image}
+            data-name={amenity.name}
+            data-description={amenity.description}
+          >
+            <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
+            <div>
+              <h3 class="text-lg font-semibold">{amenity.name}</h3>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   </div>
-
+  
   <!-- Script para cambiar la imagen y mostrar/ocultar la lista -->
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
@@ -59,10 +101,9 @@ const amenities = [
       const imageTitle = document.getElementById('image-title');
       const imageDescription = document.getElementById('image-description');
       const listItems = document.querySelectorAll('#amenities-list li');
-      const mobileToggleButton = document.getElementById('toggle-list');
-      const desktopToggleButton = document.getElementById('toggle-list-desktop');
+      const toggleButton = document.getElementById('toggle-list');
       const amenitiesList = document.getElementById('amenities-list');
-
+  
       listItems.forEach(item => {
         item.addEventListener('click', function () {
           const imageSrc = this.getAttribute('data-image');
@@ -71,20 +112,25 @@ const amenities = [
           mainImage.src = imageSrc;
           imageTitle.textContent = name;
           imageDescription.textContent = description;
+  
+          // Cierra la lista después de seleccionar un ítem
+          amenitiesList.classList.add('hidden');
+          toggleButton.textContent = 'Mostrar Amenidades';
+  
+          // Hacer scroll hacia la imagen
+          window.scrollTo({
+            top: document.querySelector('#TituloAmenidades').offsetTop,
+            behavior: 'smooth'
+          });
         });
       });
-
-      mobileToggleButton.addEventListener('click', function () {
+  
+      toggleButton.addEventListener('click', function () {
         const isHidden = amenitiesList.classList.contains('hidden');
         amenitiesList.classList.toggle('hidden', !isHidden);
-        mobileToggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
-      });
-
-      desktopToggleButton.addEventListener('click', function () {
-        const isHidden = amenitiesList.classList.contains('hidden');
-        amenitiesList.classList.toggle('hidden', !isHidden);
-        desktopToggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
+        toggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
       });
     });
   </script>
-</div>
+  
+  
