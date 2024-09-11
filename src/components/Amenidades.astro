@@ -79,13 +79,59 @@ const amenities = [
     </div>
     <!-- Dropdown for mobile -->
     <div class="md:hidden relative bg-white shadow-lg z-20">
-        <select class="w-full p-4 text-gray-700 bg-gray-200 border-none rounded-lg">
-            {amenities.map((amenity, index) => (
-                <option value={index} class="flex items-center">
-                    <img src={amenity.icon} class="w-6 h-6 inline mr-2" alt={`Icon ${index + 1}`} />
-                    {amenity.name}
-                </option>
-            ))}
-        </select>
-    </div>
+    <select id="amenities-select" class="w-full p-4 text-gray-700 bg-gray-200 border-none rounded-lg">
+        {amenities.map((amenity, index) => (
+            <option value={index} class="flex items-center">
+                <img src={amenity.icon} class="w-6 h-6 inline mr-2" alt={`Icon ${index + 1}`} />
+                {amenity.name}
+            </option>
+        ))}
+    </select>
 </div>
+</div>
+<script>
+  // Seleccionamos el elemento del dropdown y los slides
+  const amenitiesSelect = document.getElementById('amenities-select');
+  const slides = document.querySelectorAll('[data-carousel-item]');
+
+  // Función para cambiar de slide con el tipo explícito para 'index'
+  function changeSlide(index: number) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.remove('hidden');
+        slide.classList.add('block');
+      } else {
+        slide.classList.remove('block');
+        slide.classList.add('hidden');
+      }
+    });
+  }
+
+  // Verificar si amenitiesSelect no es nulo antes de usarlo
+  if (amenitiesSelect) {
+    // Escuchamos el cambio en el dropdown
+    amenitiesSelect.addEventListener('change', (event) => {
+      const target = event.target;
+      
+      // Asegurarnos de que target es un HTMLSelectElement
+      if (target instanceof HTMLSelectElement) {
+        // Obtenemos el valor seleccionado correctamente
+        const selectedIndex = parseInt(target.value, 10);
+        
+        // Cambiamos el slide basado en el valor seleccionado, ajustando el índice
+        // En algunos casos, puede ser necesario ajustar el índice restando 1.
+        // Si persiste el problema, prueba con selectedIndex - 1 para ajustar.
+        changeSlide(selectedIndex);
+      }
+    });
+
+    // Inicialmente mostrar el primer slide
+    changeSlide(0);
+  } else {
+    console.error('No se encontró el elemento #amenities-select en el DOM');
+  }
+</script>
+
+
+
+
