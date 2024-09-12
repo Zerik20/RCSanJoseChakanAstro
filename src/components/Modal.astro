@@ -83,49 +83,46 @@
     ];
 
     document.getElementById('auth-form')?.addEventListener('submit', function (event) {
-        event.preventDefault();
-        
-        const passwordInput = document.getElementById('password') as HTMLInputElement | null;
-        const password = passwordInput?.value;
-        const cardsContainer = document.getElementById('cards-container');
-        const modalBody = document.getElementById('modal-body');
-        const noPasswordMsg = document.getElementById('no-password-message');
-        const verificationMsg = document.getElementById('verification-message');
-        const passwordPrompt = document.getElementById('password-prompt');
-        const modalContainer = document.getElementById('modal-container');
-        const modalContent = document.getElementById('modal-content');
+    event.preventDefault();
+    
+    const passwordInput = document.getElementById('password') as HTMLInputElement | null;
+    const password = passwordInput?.value;
+    const cardsContainer = document.getElementById('cards-container');
+    const noPasswordMsg = document.getElementById('no-password-message');
+    const verificationMsg = document.getElementById('verification-message');
+    const passwordPrompt = document.getElementById('password-prompt');
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
 
-        if (password === '123' || password === 'admin') {
-            // Oculta el formulario, el mensaje de "no cuenta con contraseña" y el mensaje de introducción de contraseña
-            document.getElementById('auth-form')?.classList.add('hidden');
-            noPasswordMsg?.classList.add('hidden');
-            passwordPrompt?.classList.add('hidden');
-            // Muestra el mensaje de verificación y luego las cards
-            verificationMsg?.classList.remove('hidden');
-            setTimeout(() => {
-                verificationMsg?.classList.add('hidden');
-                // Generar las cards
-                if (cardsContainer) {
-                    cardsContainer.innerHTML = cardData.map(card => `
-                        <div class="p-4 border rounded-lg shadow-sm dark:border-gray-600 dark:bg-gray-800">
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">${card.title}</h4>
-                            <img src="${card.imgSrc}" alt="${card.title}" class="mt-2 mb-4 w-full h-auto">
-                            <a href="${card.fileUrl}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText}</a>
-                        </div>
-                    `).join('');
-                    cardsContainer.classList.remove('hidden');
-                }
-                // Expande el modal horizontalmente
-                modalContainer?.classList.add('max-w-4xl'); // Ajusta el ancho máximo aquí
-                modalContent?.classList.add('p-6'); // Ajusta el padding si es necesario
-            }, 2000); // Tiempo de espera para mostrar el mensaje de verificación
-        } else {
-            // Muestra el formulario y el mensaje de "no cuenta con contraseña" si la contraseña es incorrecta
-            cardsContainer?.classList.add('hidden');
-            document.getElementById('auth-form')?.classList.remove('hidden');
-            noPasswordMsg?.classList.remove('hidden');
-            passwordPrompt?.classList.remove('hidden');
-            alert('Contraseña incorrecta');
-        }
-    });
+    if (password === '123' || password === 'admin') {
+        document.getElementById('auth-form')?.classList.add('hidden');
+        noPasswordMsg?.classList.add('hidden');
+        passwordPrompt?.classList.add('hidden');
+        verificationMsg?.classList.remove('hidden');
+        setTimeout(() => {
+            verificationMsg?.classList.add('hidden');
+            if (cardsContainer) {
+                cardsContainer.innerHTML = cardData.map(card => `
+                    <div class="p-4 border rounded-lg shadow-sm dark:border-gray-600 dark:bg-gray-800">
+                        <h4 class="text-lg font-semibold text-gray-900 dark:text-white">${card.title}</h4>
+                        <img src="${card.imgSrc}" alt="${card.title}" class="mt-2 mb-4 w-full h-auto">
+                        <a href="${card.fileUrl}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText}</a>
+                    </div>
+                `).join('');
+                cardsContainer.classList.remove('hidden');
+            }
+            if (modalContainer) {
+                modalContainer.style.maxWidth = '80%'; // Ajusta el tamaño del contenedor
+            }
+            modalContent?.classList.add('p-6');
+        }, 2000);
+    } else {
+        cardsContainer?.classList.add('hidden');
+        document.getElementById('auth-form')?.classList.remove('hidden');
+        noPasswordMsg?.classList.remove('hidden');
+        passwordPrompt?.classList.remove('hidden');
+        alert('Contraseña incorrecta');
+    }
+});
+
 </script>
