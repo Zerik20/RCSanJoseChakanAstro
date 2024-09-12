@@ -74,29 +74,32 @@ const menuItems = [
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.getElementById('menu-toggle');
-        const drawerNavigation = document.getElementById('drawer-navigation');
-        const menuLinks = document.querySelectorAll('#drawer-navigation a');
+    const toggleButton = document.getElementById('menu-toggle');
+    const drawerNavigation = document.getElementById('drawer-navigation');
+    const menuLinks = document.querySelectorAll('#drawer-navigation a');
 
-        if (toggleButton && drawerNavigation) {
-            toggleButton.addEventListener('click', () => {
-                drawerNavigation.classList.toggle('-translate-x-full');
-            });
+    // Verifica si los elementos existen antes de añadir event listeners
+    if (toggleButton && drawerNavigation) {
+        toggleButton.addEventListener('click', () => {
+            drawerNavigation.classList.toggle('-translate-x-full');
+        });
 
-            // Cerrar el drawer cuando se selecciona un enlace
-            menuLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
+        // Cerrar el drawer cuando se selecciona un enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (drawerNavigation) {
                     drawerNavigation.classList.add('-translate-x-full');
-                    
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
+                }
 
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
+                const targetId = link.getAttribute('href')?.substring(1);
+                const targetElement = targetId ? document.getElementById(targetId) : null;
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
             });
-        }
-    });
+        });
+    }
+});
 </script>
