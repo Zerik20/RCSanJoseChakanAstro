@@ -1,14 +1,14 @@
 <!-- Main modal -->
-<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full bg-opacity-80 bg-black">
-    <div class="relative p-4 w-full max-w-md max-h-full">
+<div id="authentication-modal" tabindex="-1" aria-hidden="true" class="fixed inset-0 z-50 bg-black bg-opacity-80 overflow-y-auto overflow-x-hidden hidden">
+    <div id="modal-container" class="relative p-4 w-full max-w-md max-h-full transition-all duration-300 ease-in-out">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div id="modal-content" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Accede a mas información
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white" id="modal-title">
+                    Accede a más información
                 </h3>
-                <button type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>
@@ -16,25 +16,116 @@
                 </button>
             </div>
             <!-- Modal header -->
-            <div class="flex flex-col items-center p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <img src="/img/logoNegro.png" alt="Logo" class="mb-4 w-24 h-auto"> <!-- Cambia "your-logo-url.png" por la URL de tu logo -->
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div id="modal-header" class="flex flex-col items-center p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <img src="/img/logoNegro.png" alt="Logo" class="mb-4 w-24 h-auto">
+                <h3 id="password-prompt" class="text-xl font-semibold text-gray-900 dark:text-white">
                     Introduce tu contraseña
                 </h3>
             </div>
             <!-- Modal body -->
-            <div class="p-4 md:p-5">
-                <form class="space-y-4" action="#">
+            <div id="modal-body" class="p-4 md:p-5">
+                <form id="auth-form" class="space-y-4" action="#">
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tu contraseña</label>
                         <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                     </div>
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Verificar</button>
                 </form>
-                <div class="text-sm font-medium text-gray-500 dark:text-gray-300 mt-4 text-center">
+                <div id="no-password-message" class="text-sm font-medium text-gray-500 dark:text-gray-300 mt-4 text-center">
                     ¿No cuentas con contraseña? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Solicita tu contraseña</a>
+                </div>
+                <div id="verification-message" class="hidden text-sm font-medium text-gray-500 dark:text-gray-300 mt-4 text-center">
+                    Contraseña verificada, mostrando la información...
+                </div>
+                <!-- Cards -->
+                <div id="cards-container" class="hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Cards will be inserted here by JavaScript -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Define the card data
+    const cardData = [
+        {
+            title: 'Documentación Casa Helene',
+            imgSrc: '/img/ImgDocs/CasaHelene.jpg',
+            fileUrl: 'https://drive.google.com/drive/folders/15vss-5qiyIj3Ak1jdh-iqbWubKpcSYDH?usp=drive_link',
+            buttonText: 'Link'
+        },
+        {
+            title: 'Documentación Casa Sollabelle',
+            imgSrc: '/img/ImgDocs/CasaSollabelle.jpg',
+            fileUrl: 'https://drive.google.com/drive/folders/1tePcCaj1fQsj73IDC5yIpoz3ogMG3I2T?usp=drive_link',
+            buttonText: 'Link'
+        },
+        {
+            title: 'Documentación Villas Margarita',
+            imgSrc: '/img/ImgDocs/VillasMargarita.jpg',
+            fileUrl: 'https://drive.google.com/drive/folders/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj?usp=drive_link',
+            buttonText: 'Link'
+        },
+        {
+            title: 'Documentación Villas Arcoiris',
+            imgSrc: '/img/ImgDocs/VillasArcoiris.jpg',
+            fileUrl: 'https://drive.google.com/drive/folders/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj?usp=drive_link',
+            buttonText: 'Link'
+        },
+        {
+            title: 'Master Plan',
+            imgSrc: '/img/ImgDocs/MasterPlan.jpg',
+            fileUrl: '/Docs/MASTERPLAN.pdf',
+            buttonText: 'Descargar'
+        },
+        // Agrega más objetos para más cards
+    ];
+
+    document.getElementById('auth-form')?.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        const passwordInput = document.getElementById('password') as HTMLInputElement | null;
+        const password = passwordInput?.value;
+        const cardsContainer = document.getElementById('cards-container');
+        const modalBody = document.getElementById('modal-body');
+        const noPasswordMsg = document.getElementById('no-password-message');
+        const verificationMsg = document.getElementById('verification-message');
+        const passwordPrompt = document.getElementById('password-prompt');
+        const modalContainer = document.getElementById('modal-container');
+        const modalContent = document.getElementById('modal-content');
+
+        if (password === '123' || password === 'admin') {
+            // Oculta el formulario, el mensaje de "no cuenta con contraseña" y el mensaje de introducción de contraseña
+            document.getElementById('auth-form')?.classList.add('hidden');
+            noPasswordMsg?.classList.add('hidden');
+            passwordPrompt?.classList.add('hidden');
+            // Muestra el mensaje de verificación y luego las cards
+            verificationMsg?.classList.remove('hidden');
+            setTimeout(() => {
+                verificationMsg?.classList.add('hidden');
+                // Generar las cards
+                if (cardsContainer) {
+                    cardsContainer.innerHTML = cardData.map(card => `
+                        <div class="p-4 border rounded-lg shadow-sm dark:border-gray-600 dark:bg-gray-800">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">${card.title}</h4>
+                            <img src="${card.imgSrc}" alt="${card.title}" class="mt-2 mb-4 w-full h-auto">
+                            <a href="${card.fileUrl}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText}</a>
+                        </div>
+                    `).join('');
+                    cardsContainer.classList.remove('hidden');
+                }
+                // Expande el modal horizontalmente
+                modalContainer?.classList.add('max-w-4xl'); // Ajusta el ancho máximo aquí
+                modalContent?.classList.add('p-6'); // Ajusta el padding si es necesario
+            }, 2000); // Tiempo de espera para mostrar el mensaje de verificación
+        } else {
+            // Muestra el formulario y el mensaje de "no cuenta con contraseña" si la contraseña es incorrecta
+            cardsContainer?.classList.add('hidden');
+            document.getElementById('auth-form')?.classList.remove('hidden');
+            noPasswordMsg?.classList.remove('hidden');
+            passwordPrompt?.classList.remove('hidden');
+            alert('Contraseña incorrecta');
+        }
+    });
+</script>
