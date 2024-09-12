@@ -85,8 +85,16 @@ const menuItems = [
 
             // Cerrar el drawer cuando se selecciona un enlace
             menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
                     drawerNavigation.classList.add('-translate-x-full');
+                    
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
                 });
             });
         }
