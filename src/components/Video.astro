@@ -1,0 +1,29 @@
+<style>
+    .video-container {
+        position: relative;
+        width: 70%; /* Reducir el ancho del contenedor al 70% */
+        margin: 0 auto; /* Centrar el contenedor */
+        padding-bottom: 39.375%; /* Proporción 16:9 para vídeos ajustada al 70% */
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* El vídeo ocupa todo el ancho del contenedor */
+        height: 100%; /* El vídeo ocupa todo el alto del contenedor */
+    }
+</style>
+<div class="bg-white p-6 shadow-md" id="VIDEO" >
+    <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative">
+        Casa Muestra
+        <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
+      </h2>
+    <div class="video-container" data-aos="fade-up"data-aos-easing="linear"
+    data-aos-duration="1000">
+        <iframe src="https://www.youtube.com/embed/8GOYPQoB-Pw?si=MKeBvJlzL4IzyPfS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>

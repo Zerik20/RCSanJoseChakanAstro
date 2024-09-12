@@ -147,9 +147,10 @@ const miniSections = [
   }
 </style>
 <div style="background-color: rgb(255, 255, 255);" id="CAMPODEGOLF">
-  <section class="golf-section"  >
+  <section class="golf-section" >
     <div class="overlay"></div>
-    <div class="content">
+    <div class="content"data-aos="zoom-in-up"data-aos-easing="linear"
+    data-aos-duration="1500">
       <h2 class="">{title}</h2>
       <p>{description}</p>
       <a href={buttonLink} class="button">{buttonText}</a>
@@ -158,7 +159,8 @@ const miniSections = [
   
   <div class="mini-section-container">
     {miniSections.map(section => (
-      <div class="mini-section" style={{ backgroundImage: `url(${section.imageUrl})` }}>
+      <div class="mini-section" style={{ backgroundImage: `url(${section.imageUrl})` }} data-aos="fade-up"data-aos-easing="linear"
+      data-aos-duration="500">
         <div class="overlay"></div>
         <h3>{section.phrase}</h3>
       </div>

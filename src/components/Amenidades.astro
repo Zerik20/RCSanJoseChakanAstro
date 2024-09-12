@@ -1,6 +1,12 @@
 ---
 const amenities = [
   {
+    name: "Casa Club tipo Hacienda",
+    description: "Lo mas exclusivo para nuestros miembros.",
+    image: "/img/Amenidades/Club.jpg",
+    icon: "/img/Iconossvg/Hacienda.svg",
+  },
+  {
     name: "Bar",
     description: "Las mejores bebidas.",
     image: "/img/Amenidades/Bar.jpg",
@@ -73,12 +79,6 @@ const amenities = [
     icon: "/img/Iconossvg/GymUrbano.svg",
   },
   {
-    name: "Casa Club tipo Hacienda",
-    description: "Lo mas exclusivo para nuestros miembros.",
-    image: "/img/Amenidades/Club.jpg",
-    icon: "/img/Iconossvg/Hacienda.svg",
-  },
-  {
     name: "Capilla",
     description: "Perfecto para los creyentes.",
     image: "/img/Amenidades/Capilla.jpg",
@@ -95,14 +95,16 @@ const amenities = [
 ---
 
 <div class="bg-white p-6 shadow-md" id="AMENIDADES">
-    <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative">
+    <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative"data-aos="fade-up"data-aos-easing="linear"
+    data-aos-duration="500">
       Amenidades del Residencial
       <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
     </h2>
   
     <!-- Imagen Grande con Degradado en la Parte Inferior -->
     <div class="w-full flex justify-center mb-4">
-      <div class="relative w-full">
+      <div class="relative w-full"data-aos="fade-up"data-aos-easing="linear"
+      data-aos-duration="500">
         <img id="main-image" src={amenities[0].image} alt="Amenidad seleccionada" class="w-full h-96 object-cover rounded-lg" />
         <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent text-white p-4 flex flex-col justify-end rounded-lg">
           <h3 id="image-title" class="text-2xl font-semibold">{amenities[0].name}</h3>
