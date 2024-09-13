@@ -38,7 +38,7 @@
                     Contraseña verificada, mostrando la información...
                 </div>
                 <!-- Cards -->
-                <div id="cards-container" class="hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div id="cards-container" class="hidden mt-4 grid-cols-1 sm:grid-cols-2 gap-4">
                     <!-- Cards will be inserted here by JavaScript -->
                 </div>
             </div>
@@ -145,6 +145,7 @@
                     </div>
                 `).join('');
                 cardsContainer.classList.remove('hidden');
+                cardsContainer?.classList.add('grid');
             }
             if (modalContainer) {
                 modalContainer.style.maxWidth = '80%'; // Ajusta el tamaño del contenedor
