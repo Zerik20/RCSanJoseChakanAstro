@@ -74,16 +74,44 @@
             buttonText: 'Link'
         },
         {
+            title: 'Chepinas',
+            imgSrc: '/img/ImgDocs/Chepinas.jpg',
+            fileUrl: 'https://drive.google.com/drive/folders/1FxkeuDP2qdbLxQBzkboyvBajig4FINL4?usp=drive_link',
+            buttonText: 'Link'
+        },
+        {
             title: 'Master Plan',
             imgSrc: '/img/ImgDocs/MasterPlan.jpg',
-            fileUrl: '/Docs/MASTERPLAN.pdf',
+            fileUrl: '/Docs/Inmobiliarias/MASTERPLAN.pdf',
             buttonText: 'Descargar'
         },
         {
             title: 'Lista de Precios',
             imgSrc: '/img/ImgDocs/ListaDePrecios.jpg',
-            fileUrl: '/Docs/ListaDePrecios.pdf',
+            fileUrl: '/Docs/Inmobiliarias/ListaDePrecios.pdf',
             buttonText: 'Descargar'
+        },
+        {
+            title: 'Formato de cobro de comisión',
+            imgSrc: '/img/ImgDocs/Comision.jpg',
+            fileUrl: '/Docs/Inmobiliarias/Formatodecobrodecomisión.xlsx',
+            buttonText: 'Descargar'
+        },
+        {
+            title: 'Curriculum de la Constructora',
+            imgSrc: '/img/ImgDocs/CV.jpg',
+            fileUrl: '/Docs/Inmobiliarias/CV.pdf',
+            fileUrl2: '/Docs/Inmobiliarias/CV-English.pdf',
+            buttonText: 'Descargar-Español',
+            buttonText2: 'Download-English'
+        },
+        {
+            title: 'Brochure',
+            imgSrc: '/img/ImgDocs/Brochure.jpg',
+            fileUrl: '/Docs/Inmobiliarias/Brochure_Royal_County_SJC.pdf',
+            fileUrl2: '/Docs/Inmobiliarias/Brochure_Royal_County_SJC_Inglés.pdf',
+            buttonText: 'Descargar-Español',
+            buttonText2: 'Download-English'
         },
         // Agrega más objetos para más cards
     ];
@@ -112,7 +140,8 @@
                     <div class="p-4 border rounded-lg shadow-sm dark:border-gray-600 dark:bg-gray-800">
                         <h4 class="text-lg font-semibold text-gray-900 dark:text-white">${card.title}</h4>
                         <img src="${card.imgSrc}" alt="${card.title}" class="mt-2 mb-4 w-full h-auto">
-                        <a href="${card.fileUrl}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText}</a>
+                        ${card.fileUrl ? `<a href="${card.fileUrl}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText}</a>` : ''}
+                        ${card.fileUrl2 ? `<a href="${card.fileUrl2}" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">${card.buttonText2}</a>` : ''}
                     </div>
                 `).join('');
                 cardsContainer.classList.remove('hidden');
