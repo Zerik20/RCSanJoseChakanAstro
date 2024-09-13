@@ -1,22 +1,28 @@
+<!-- Preload del video y la imagen de previsualización -->
+<link rel="preload" href="/vid/VideoCasa.mp4" as="video" type="video/mp4">
+<link rel="preload" href="/img/Fachada.jpg" as="image">
+
 <div id="animation-carousel" class="relative w-full h-screen" data-carousel="static">
   <div class="absolute inset-0">
     <div id="video-preview" class="absolute inset-0">
-      <img src="/img/Fachada.jpg" alt="Previsualización del video" class="block w-full h-full object-cover">
+      <img src="/img/Fachada.jpg" alt="Previsualización del video" class="block w-full h-full object-cover" loading="eager">
     </div>
     <video id="background-video" class="block w-full h-full object-cover" autoplay loop muted playsinline preload="auto">
-        <source src="/vid/VideoCasa.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-      </video>      
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <source src="/vid/VideoCasa.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <!-- Eliminado el div con opacidad ya que el video cubre el fondo -->
   </div>
+
   <div class="absolute top-0 left-0 right-0 flex justify-center p-4">
-    <img src="/img/logoblanco.png" alt="Logo" class="w-32 h-auto">
+    <img src="/img/logoblanco.png" alt="Logo" class="w-32 h-auto" loading="eager">
   </div>
+
   <div class="relative h-full overflow-hidden">
     <div class="hidden h-full" data-carousel-item="active">
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">EN EL CORAZÓN DE LA CULTURA MAYA</h1>
-        <br/>
+        <br />
         <p class="text-lg sm:text-xl md:text-2xl text-center">Carretera Ixil km 1.5, Chicxulub Pueblo, Yucatán, México.</p>
       </div>
     </div>
@@ -24,7 +30,7 @@
     <div class="hidden h-full" data-carousel-item>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">UN LUGAR DE LUJO</h1>
-        <br/>
+        <br />
         <p class="text-lg sm:text-xl md:text-2xl text-center">Preventa de casas</p>
       </div>
     </div>
@@ -32,59 +38,50 @@
     <div class="hidden h-full" data-carousel-item>
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">VIVE EN ARMONÍA CON LA NATURALEZA</h1>
-        <br/>
+        <br />
         <p class="text-lg sm:text-xl md:text-2xl text-center">Royal County San José Chakan</p>
       </div>
     </div>
   </div>
 
   <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-    <span   
- class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white   
- group-focus:outline-none">
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
       <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round"   
- stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
       </svg>
       <span class="sr-only">Previous</span>
     </span>
   </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-<!-- Botón de llamada a la acción -->
-<div class="absolute bottom-10 flex justify-center w-full z-30">
-  <button onclick="window.location.href='#CONTACTO'" class="bg-white text-black py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
-      Contáctanos
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+      <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
   </button>
 </div>
 
-
+<!-- Botón de llamada a la acción -->
+<div class="absolute bottom-10 flex justify-center w-full z-30">
+  <button onclick="window.location.href='#CONTACTO'" class="bg-white text-black py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
+    Contáctanos
+  </button>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-  const video = document.getElementById('background-video') as HTMLVideoElement;
-  const preview = document.getElementById('video-preview');
-  const textElements = document.querySelectorAll('.fade-in');
+    const video = document.getElementById('background-video');
+    const preview = document.getElementById('video-preview');
 
-  // Mostrar el texto inmediatamente
-  textElements.forEach(el => el.classList.remove('hidden'));
-  
-  if (video && preview) {
-    // Esperar a que el video esté listo
-    video.addEventListener('loadeddata', () => {
-      setTimeout(() => {
-        preview.style.display = 'none'; // Ocultar la vista previa después de 2 segundos
-        video.play(); // Iniciar la reproducción del video
-      }, 2000); // Establecer el retraso en 2 segundos
-    });
-  }
-});
-
+    if (video) {
+      video.addEventListener('loadeddata', () => {
+        if (preview) {
+          setTimeout(() => {
+            preview.classList.add('hidden'); // Usar clases en lugar de estilos inline
+          }, 2000);
+        }
+      });
+    }
+  });
 </script>
