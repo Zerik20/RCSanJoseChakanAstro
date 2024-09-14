@@ -1,3 +1,11 @@
+---
+import i18next, { t } from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
+---
+<!-- Selector de idiomas -->
+<div class="absolute inset-0 top-4 left-4 z-40 h-0">
+  <LanguageSelector showFlag={true}  />
+</div>
 <!-- Preload del video y la imagen de previsualización -->
 <link rel="preload" href="/vid/VideoCasa.mp4" as="video" type="video/mp4">
 <link rel="preload" href="/img/Fachada.jpg" as="image">
@@ -21,7 +29,7 @@
   <div class="relative h-full overflow-hidden">
     <div class="hidden h-full" data-carousel-item="active">
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">EN EL CORAZÓN DE LA CULTURA MAYA</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">{t("slider.title1")} </h1>
         <br />
         <p class="text-lg sm:text-xl md:text-2xl text-center">Carretera Ixil km 1.5, Chicxulub Pueblo, Yucatán, México.</p>
       </div>
@@ -39,7 +47,7 @@
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">VIVE EN ARMONÍA CON LA NATURALEZA</h1>
         <br />
-        <p class="text-lg sm:text-xl md:text-2xl text-center">Royal County San José Chakan</p>
+        <p class="text-lg sm:text-xl md:text-2xl text-center">Royal County San José Chakán</p>
       </div>
     </div>
   </div>

@@ -4,13 +4,16 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Venta de casas en yucatan" />
+		<meta name="description" content={t("layout.description")} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Slider from "../../components/Slider.astro";
+import Footer from "../../components/Footer.astro";
+import Products from "../../components/Products.astro";
+import CampoGolf from "../../components/CampoGolf.astro";
+import Nosotros from "../../components/Nosotros.astro";
+import Amenidades from "../../components/Amenidades.astro";
+import Contacto from "../../components/Contacto.astro";
+import Video from "../../components/Video.astro";
+import i18next, { t, changeLanguage } from "i18next";
+
+changeLanguage("fr");
+---
+<Layout title={t("layout.title")}>
+	<main>
+		<Navbar/>
+		<Slider/>
+		<Nosotros/>
+		<Products/>
+		<CampoGolf/>
+		<Amenidades/>
+		<Video/>
+		<Contacto/>	
+		<Footer/>
+	</main>
+</Layout>
+
+<style>
+</style>

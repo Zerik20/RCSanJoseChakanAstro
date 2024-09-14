@@ -10,6 +10,10 @@ const menuItems = [
     { name: 'CASA MUESTRA', icon: '/img/IconosMenu/Video.svg', href: '#VIDEO' },
     { name: 'CONTACTO', icon: '/img/IconosMenu/Contacto.svg', href: '#CONTACTO' },
 ];
+
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import { LanguageSelector } from "astro-i18next/components";
 ---
 
 <!-- Botón flotante siempre visible -->
