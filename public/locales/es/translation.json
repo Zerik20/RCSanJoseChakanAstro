@@ -50,6 +50,7 @@
         "frase4": "Lagos artificiales"
     },
     "ameni":{
+        "title": "Amenidades del Residencial",
         "club": "Casa Club tipo Hacienda",
         "desc1": "Lo mas exclusivo para nuestros miembros.",
         "bar": "Bar",
@@ -80,5 +81,8 @@
         "desc14": "Perfecto para los creyentes.",
         "gym": "Gimnasio",
         "desc15": "Para el fortalecimiento fisico."
+    },
+    "video":{
+        "title": "Casa Muestra"
     }
   }
