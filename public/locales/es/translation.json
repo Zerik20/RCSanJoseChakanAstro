@@ -21,5 +21,11 @@
       "item5": "CASA MUESTRA",
       "item6": "CONTACTO",
       "inmobi": "INMOBILIARIAS"
+    },
+    "nosotros": {
+      "title": "Nosotros",
+      "descripcion1": "En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo. Nuestro equipo está comprometido con la excelencia, asegurando que cada detalle de tu experiencia sea perfecto.",
+      "descripcion2": "Desde nuestras lujosas residencias hasta nuestras instalaciones de primer nivel, estamos aquí para hacer realidad tus sueños. Descubre la diferencia de vivir en un lugar donde cada día es una nueva oportunidad para disfrutar de lo mejor.",
+      "cont":"Contáctanos"
     }
   }

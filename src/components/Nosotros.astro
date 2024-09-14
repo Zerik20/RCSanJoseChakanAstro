@@ -1,14 +1,18 @@
+---
+import i18next, { t } from "i18next";
+---
+
 <section class="nosotros-section" id="NOSOTROS">
     <div class="nosotros-content"data-aos="fade-right"data-aos-easing="linear"
     data-aos-duration="1500">
-      <h2 class="nosotros-title">Nosotros</h2>
+      <h2 class="nosotros-title">{t("nosotros.title")}</h2>
       <p class="nosotros-description">
-        En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo. Nuestro equipo está comprometido con la excelencia, asegurando que cada detalle de tu experiencia sea perfecto.
+        {t("nosotros.descripcion1")}
       </p>
       <p class="nosotros-description">
-        Desde nuestras lujosas residencias hasta nuestras instalaciones de primer nivel, estamos aquí para hacer realidad tus sueños. Descubre la diferencia de vivir en un lugar donde cada día es una nueva oportunidad para disfrutar de lo mejor.
+        {t("nosotros.descripcion2")}
       </p>
-      <a href="/contacto" class="nosotros-button">Contáctanos</a>
+      <a href="/contacto" class="nosotros-button">{t("nosotros.cont")}</a>
     </div>
     <div class="nosotros-image" data-aos="fade-left"data-aos-easing="linear"
     data-aos-duration="1500">
