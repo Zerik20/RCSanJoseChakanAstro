@@ -39,5 +39,14 @@
         "title4": "CASA HELENE",
         "desc4": "Lujosa y grande",
         "but": "Conocer"
+    },
+    "golf":{
+        "title": "Exclusivo Campo de Golf",
+        "descripcion": "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.",
+        "but":"Conoce más",
+        "frase1": "9 hoyos completos",
+        "frase2": "Campo iluminado",
+        "frase3": "Disponibilidad 24 hrs",
+        "frase4": "Lagos artificiales"
     }
   }

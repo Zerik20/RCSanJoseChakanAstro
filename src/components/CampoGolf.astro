@@ -1,26 +1,28 @@
 ---
-const title = "Exclusivo Campo de Golf";
-const description = "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.";
-const buttonText = "Conoce más";
+import i18next, { t } from "i18next";
+
+const title = t("golf.title");
+const description = t("golf.descripcion");
+const buttonText = t("golf.but");
 const buttonLink = "#AMENIDADES";
 
 // Datos de las miniseciones
 const miniSections = [
   {
     imageUrl: '/img/CampoGolf/1.jpg',
-    phrase: '9 hoyos completos',
+    phrase: t("golf.frase1"),
   },
   {
     imageUrl: '/img/CampoGolf/2.jpg',
-    phrase: 'Campo iluminado',
+    phrase: t("golf.frase1"),
   },
   {
     imageUrl: '/img/CampoGolf/3.jpg',
-    phrase: 'Disponibilidad 24 hrs',
+    phrase: t("golf.frase1"),
   },
   {
     imageUrl: '/img/CampoGolf/4.jpg',
-    phrase: 'Lagos artificiales',
+    phrase: t("golf.frase1"),
   },
 ];
 ---
