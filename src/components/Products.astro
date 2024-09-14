@@ -1,28 +1,29 @@
 ---
 import Card from './Card.astro';
+import i18next, { t } from "i18next";
 
 const data = [
     {
-        title: "CASA SOLLABELLE",
-        description: "Areas amplias y comodas",
+        title: t("productos.title1"),
+        description: t("productos.desc1"),
         imageUrl: "/img/Products/CasaSollabelle.jpg",
         link: "/Docs/FichasTecnicas/FichaTecnica_CasaModeloSollabelle.pdf"
     },
     {
-        title: "VILLAS ARCOIRIS",
-        description: "Accesible y minimalista",
+      title: t("productos.title2"),
+      description: t("productos.desc2"),
         imageUrl: "/img/Products/VillasArcoiris.jpg",
         link: "/Docs/FichasTecnicas/FichaTecnica_VillasArcoiris.pdf"
     },
     {
-        title: "VILLAS MARGARITA",
-        description: "Modelo de 2 pisos",
+      title: t("productos.title3"),
+      description: t("productos.desc3"),
         imageUrl: "/img/Products/VillasMargarita.jpg",
         link: "/Docs/FichasTecnicas/FichaTecnica_VillasMargarita.pdf"
     },
     {
-        title: "CASA HELENE",
-        description: "Lujosa y grande",
+      title: t("productos.title4"),
+      description: t("productos.desc4"),
         imageUrl: "/img/Products/CasaHelene.jpg",
         link: "/Docs/FichasTecnicas/FichaTecnica_CasasModeloHelene.pdf"
     },
@@ -86,7 +87,7 @@ const data = [
   <div id="backgroundContainer" class="background-container"></div>
 
     <div class="content-container bg-black bg-opacity-40">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center pb-6" style="color: white;">Modelos Disponibles</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center pb-6" style="color: white;">{t("productos.title")}</h1>
         <div class="grid">
             {data.map((item, index) => (
                 <div id={`card-${index}`} class="card">
