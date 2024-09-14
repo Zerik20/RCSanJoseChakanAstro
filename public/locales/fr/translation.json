@@ -1,14 +1,120 @@
 {
-    "layout": {
-      "title": "Royal County San José Chakán",
-      "description": "Vente de maisons au Yucatán"
-    },
-    "slider": {
-      "title1": "AU CŒUR DE LA CULTURE MAYA",
-      "subtitle1": "Route Ixil km 1.5, Chicxulub Pueblo, Yucatán, Mexique.",
-      "title2": "UN ENDROIT DE LUXE",
-      "subtitle2": "Prévente de maisons",
-      "title3": "VIVRE EN HARMONIE AVEC LA NATURE",
-      "subtitle3": "Royal County San José Chakán"
-    }
+  "layout": {
+    "title": "Royal County San José Chakán",
+    "description": "Vente de maisons au Yucatán"
+  },
+  "slider": {
+    "title1": "AU CŒUR DE LA CULTURE MAYA",
+    "subtitle1": "Carretera Ixil km 1.5, Chicxulub Pueblo, Yucatán, Mexique.",
+    "title2": "UN ENDROIT DE LUXE",
+    "subtitle2": "Vente en pré-lancement",
+    "title3": "VIVEZ EN HARMONIE AVEC LA NATURE",
+    "subtitle3": "Royal County San José Chakán",
+    "contbut": "Contactez-nous"
+  },
+  "nav": {
+    "menu": "Menu",
+    "item1": "À PROPOS DE NOUS",
+    "item2": "MAISONS À VENDRE",
+    "item3": "GOLF",
+    "item4": "AMÉNAGEMENTS",
+    "item5": "MAISON TÉMOIN",
+    "item6": "CONTACT",
+    "inmobi": "IMMOBILIER"
+  },
+  "nosotros": {
+    "title": "À Propos de Nous",
+    "descripcion1": "Au Royal County San José Chakán, nous nous engageons à offrir un style de vie unique et exclusif. Notre équipe est dédiée à l'excellence, garantissant que chaque détail de votre expérience soit parfait.",
+    "descripcion2": "De nos résidences luxueuses à nos installations de premier ordre, nous sommes là pour réaliser vos rêves. Découvrez la différence de vivre dans un endroit où chaque jour est une nouvelle opportunité de profiter du meilleur.",
+    "cont": "Contactez-nous"
+  },
+  "productos": {
+    "title": "Modèles Disponibles",
+    "title1": "MAISON SOLLABELLE",
+    "desc1": "Espaces spacieux et confortables",
+    "title2": "VILLAS ARCOIRIS",
+    "desc2": "Abordable et minimaliste",
+    "title3": "VILLAS MARGARITA",
+    "desc3": "Modèle à 2 étages",
+    "title4": "MAISON HELENE",
+    "desc4": "Luxueuse et grande",
+    "but": "En Savoir Plus"
+  },
+  "golf": {
+    "title": "Terrain de Golf Exclusif",
+    "descripcion": "Découvrez l'expérience de vivre dans une résidence de luxe avec un terrain de golf. Profitez de greens parfaits et d'un style de vie inégalé. Notre terrain de golf est conçu pour vous offrir le meilleur en divertissement et relaxation.",
+    "but": "En Savoir Plus",
+    "frase1": "9 trous complets",
+    "frase2": "Terrain illuminé",
+    "frase3": "Disponibilité 24h/24",
+    "frase4": "Lacs artificiels"
+  },
+  "ameni": {
+    "title": "Aménagements Résidentiels",
+    "club": "Club House style Hacienda",
+    "desc1": "Le plus exclusif pour nos membres.",
+    "bar": "Bar",
+    "desc2": "Les meilleures boissons.",
+    "rest": "Restaurant",
+    "desc3": "Dos Reyes Restaurant, la meilleure nourriture.",
+    "mascot": "Parc pour Animaux",
+    "desc4": "Pour profiter de l'extérieur.",
+    "golf": "Terrain de Golf",
+    "desc5": "9 trous illuminés.",
+    "spa": "Spa",
+    "desc6": "Eternal Clinical, relaxation maximale.",
+    "pisci": "Piscine",
+    "desc7": "Profitez-en à tout moment.",
+    "ciclo": "Piste Cyclable",
+    "desc8": "Pour des promenades agréables.",
+    "padel": "Terrains de Padel",
+    "desc9": "Le sport à la mode.",
+    "tennis": "Terrains de Tennis",
+    "desc10": "Pour les amateurs de sport.",
+    "subt": "Services Souterrains",
+    "desc11": "Toujours fonctionnel.",
+    "acceso": "Accès Contrôlé",
+    "desc12": "Pour une sécurité maximale.",
+    "urb": "Gym Urbain",
+    "desc13": "Exercice en plein air.",
+    "capilla": "Chapelle",
+    "desc14": "Parfait pour les croyants.",
+    "gym": "Salle de Gym",
+    "desc15": "Pour le renforcement physique."
+  },
+  "video": {
+    "title": "Maison Témoignage"
+  },
+  "contacto": {
+    "title": "Contact",
+    "email": "Email",
+    "placeemail": "email@exemple.com",
+    "asunto": "Objet",
+    "placeasunto": "Exemple: Plus d'informations",
+    "mensaje": "Message",
+    "placemensaje": "Vous pouvez me contacter à...",
+    "but": "Envoyer"
+  },
+  "footer": {
+    "copy": "2024 Royal County San José Chakán. Tous droits réservés."
+  },
+  "inmo": {
+    "title": "Accéder à Plus d'Informations",
+    "intruc": "Entrez votre mot de passe",
+    "contra": "Votre mot de passe",
+    "verifi": "Vérifier",
+    "preg": "Vous n'avez pas de mot de passe? ",
+    "soli": "Demandez votre mot de passe",
+    "confi": "Mot de passe vérifié, affichage des informations...",
+    "doc1": "Documentation Maison Helene",
+    "doc2": "Documentation Maison Sollabelle",
+    "doc3": "Documentation Villas Margarita",
+    "doc4": "Documentation Villas Arcoiris",
+    "doc5": "Chepinas",
+    "doc6": "Plan Directeur",
+    "doc7": "Liste des Prix",
+    "doc8": "Formulaire de Commission",
+    "doc9": "Curriculum du Constructeur",
+    "doc10": "Brochure"
+  }
 }
