@@ -84,5 +84,37 @@
     },
     "video":{
         "title": "Casa Muestra"
+    },
+    "contacto":{
+        "title": "Contacto",
+        "email": "Email",
+        "placeemail": "email@ejemplo.com",
+        "asunto": "Asunto",
+        "placeasunto": "Ejemplo: Más informes",
+        "mensaje": "Mensaje",
+        "placemensaje": "Me puede contactar al...",
+        "but": "Enviar"
+    },
+    "footer":{
+        "copy": "2024 Royal County San José Chakán. Todos los derechos reservados."
+    },
+    "inmo":{
+        "title": "Accede a más información",
+        "intruc": "Introduce tu contraseña",
+        "contra": "Tu contraseña",
+        "verifi": "Verificar",
+        "preg": "¿No cuentas con contraseña? ",
+        "soli": "Solicita tu contraseña",
+        "confi": "Contraseña verificada, mostrando la información...",
+        "doc1": "Documentación Casa Helene",
+        "doc2": "Documentación Casa Sollabelle",
+        "doc3": "Documentación Villas Margarita",
+        "doc4": "Documentación Villas Arcoiris",
+        "doc5": "Chepinas",
+        "doc6": "Master Plan",
+        "doc7": "Lista de Precios",
+        "doc8": "Formato de cobro de comisión",
+        "doc9": "Curriculum de la Constructora",
+        "doc10": "Brochure"
     }
   }
