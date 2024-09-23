@@ -19,7 +19,8 @@
     "item3": "GOLF",
     "item4": "AMÉNAGEMENTS",
     "item5": "MAISON TÉMOIN",
-    "item6": "CONTACT",
+    "item6": "RESTAURANT 1900",
+    "item7": "CONTACT",
     "inmobi": "IMMOBILIER"
   },
   "nosotros": {
@@ -116,5 +117,10 @@
     "doc8": "Formulaire de Commission",
     "doc9": "Curriculum du Constructeur",
     "doc10": "Brochure"
-  }
+  },
+  "rest": {
+      "title": "RESTAURANT 1900",
+      "descripcion": "Situé dans la majestueuse hacienda San José Chakán, le Restaurant 1900 offre une expérience culinaire inégalée, alliant le meilleur de la cuisine traditionnelle mexicaine, française, grecque et méditerranéenne avec des touches modernes.\nNos plats sont préparés avec des ingrédients frais et locaux, mettant en valeur des saveurs authentiques dans chaque bouchée. Depuis nos vastes terrasses, vous pouvez profiter de vues spectaculaires tout en savourant\nnos plats dans une ambiance chaleureuse et rustique, inspirée par l'architecture des anciennes haciendas mexicaines. Avec une décoration qui évoque l'élégance des temps passés et un service exceptionnel,\nle Restaurant 1900 vous invite à une expérience qui ravit tous les sens.",
+      "buto": "Télécharger le Menu"
+  } 
 }
