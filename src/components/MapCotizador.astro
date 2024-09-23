@@ -1,0 +1,42 @@
+---
+/* Aquí puedes importar tu mapa SVG si lo tienes como archivo */
+const mapaSVG = "/img/MasterDisponibles.svg";
+---
+
+<section class="flex flex-col md:flex-row justify-center items-center p-4 bg-gray-100">
+  <!-- Mapa interactivo -->
+  <div class="w-full md:w-1/2 p-4">
+    <img src={mapaSVG} alt="Mapa interactivo" class="w-full h-auto object-contain shadow-lg rounded-lg">
+  </div>
+
+  <!-- Formulario de cotización -->
+  <div class="w-full md:w-1/2 p-6 bg-white shadow-lg rounded-lg mt-6 md:mt-0">
+    <h2 class="text-2xl font-bold mb-4">Cotizador</h2>
+
+    <form class="space-y-4">
+      <div>
+        <label for="lote" class="block text-sm font-medium text-gray-700">Número de lote</label>
+        <input type="text" id="lote" name="lote" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Ej. Lote 101">
+      </div>
+
+      <div>
+        <label for="pago-inicial" class="block text-sm font-medium text-gray-700">Pago inicial</label>
+        <input type="number" id="pago-inicial" name="pago-inicial" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Ej. 5000">
+      </div>
+
+      <div>
+        <label for="pagos-mensuales" class="block text-sm font-medium text-gray-700">Pagos mensuales</label>
+        <input type="number" id="pagos-mensuales" name="pagos-mensuales" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Ej. 1000">
+      </div>
+
+      <div>
+        <label for="plazo" class="block text-sm font-medium text-gray-700">Plazo en meses</label>
+        <input type="number" id="plazo" name="plazo" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Ej. 12">
+      </div>
+
+      <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+        Calcular cotización
+      </button>
+    </form>
+  </div>
+</section>
