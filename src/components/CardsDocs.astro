@@ -8,12 +8,12 @@ import i18next, { t } from "i18next";
     <img src={imgSrc} alt={title} class="mt-2 mb-4 w-full h-auto object-cover" />
     <div class="flex flex-wrap gap-2 mt-2">
         {fileUrl ? (
-            <a href={fileUrl} target="_blank" class="inline-block text-white bg-primary hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+            <a href={fileUrl} target="_blank" rel="noopener noreferrer" class="inline-block text-white bg-primary hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
                 {buttonText}
             </a>
         ) : ''}
         {fileUrl2 ? (
-            <a href={fileUrl2} target="_blank" class="inline-block text-white bg-primary hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+            <a href={fileUrl2} target="_blank" rel="noopener noreferrer" class="inline-block text-white bg-primary hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
                 {buttonText2}
             </a>
         ) : ''}

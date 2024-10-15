@@ -3,72 +3,72 @@ import i18next, { t } from "i18next";
 import CardsDocs from '../components/CardsDocs.astro';
 // Define the card data
 const cardData = [
-        {
-            title: t("inmo.doc1"),
-            imgSrc: '/img/ImgDocs/CasaHelene.jpg',
-            fileUrl: 'https://drive.google.com/drive/folders/15vss-5qiyIj3Ak1jdh-iqbWubKpcSYDH?usp=drive_link',
-            buttonText: 'Link'
-        },
-        {
-            title: t("inmo.doc2"),
-            imgSrc: '/img/ImgDocs/CasaSollabelle.jpg',
-            fileUrl: 'https://drive.google.com/drive/folders/1tePcCaj1fQsj73IDC5yIpoz3ogMG3I2T?usp=drive_link',
-            buttonText: 'Link'
-        },
-        {
-            title: t("inmo.doc3"),
-            imgSrc: '/img/ImgDocs/VillasMargarita.jpg',
-            fileUrl: 'https://drive.google.com/drive/folders/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj?usp=drive_link',
-            buttonText: 'Link'
-        },
-        {
-            title: t("inmo.doc4"),
-            imgSrc: '/img/ImgDocs/VillasArcoiris.jpg',
-            fileUrl: 'https://drive.google.com/drive/folders/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj?usp=drive_link',
-            buttonText: 'Link'
-        },
-        {
-            title: t("inmo.doc5"),
-            imgSrc: '/img/ImgDocs/Chepinas.jpg',
-            fileUrl: 'https://drive.google.com/drive/folders/1FxkeuDP2qdbLxQBzkboyvBajig4FINL4?usp=drive_link',
-            buttonText: 'Link'
-        },
-        {
-            title: t("inmo.doc6"),
-            imgSrc: '/img/ImgDocs/MasterPlan.jpg',
-            fileUrl: 'https://drive.google.com/uc?export=download&id=1d4AWUap89XrDRWh8ikyZTZafsK5-xPHx',
-            buttonText: 'Descargar'
-        },
-        {
-            title: t("inmo.doc7"),
-            imgSrc: '/img/ImgDocs/ListaDePrecios.jpg',
-            fileUrl: 'https://drive.google.com/uc?export=download&id=1ow9ncXb5k9UdhlwAK_XJWiJqAXXzC-8W',
-            buttonText: 'Descargar'
-        },
-        {
-            title: t("inmo.doc8"),
-            imgSrc: '/img/ImgDocs/Comision.jpg',
-            fileUrl: 'https://docs.google.com/spreadsheets/d/1Ue2VIOW2n2J97JfanXRNXRvLRfsUBBj4/export?format=xlsx',
-            buttonText: 'Descargar'
-        },
-        {
-            title: t("inmo.doc9"),
-            imgSrc: '/img/ImgDocs/CV.jpg',
-            fileUrl: 'https://drive.google.com/uc?export=download&id=1adCHkrTTFEuEqCMfl82Gz__fmiit4PYc',
-            fileUrl2: 'https://drive.google.com/uc?export=download&id=1ltE6lfElUYJu7c50yFMybyOoDtpDLNtM',
-            buttonText: 'Descargar-Español',
-            buttonText2: 'Download-English'
-        },
-        {
-            title: t("inmo.doc10"),
-            imgSrc: '/img/ImgDocs/Brochure.jpg',
-            fileUrl: 'https://drive.google.com/uc?export=download&id=1Zt9n2qtY0E6mpSaqcdsLA_3asOD1HHPg',
-            fileUrl2: 'https://drive.google.com/uc?export=download&id=1rIyf-k2103eKgKcC2UAyoGaJMiNdu2kT',
-            buttonText: 'Descargar-Español',
-            buttonText2: 'Download-English'
-        },
-        // Agrega más objetos para más cards
-    ];
+    {
+        title: t("inmo.doc1"),
+        imgSrc: '/img/ImgDocs/CasaHelene.jpg',
+        fileUrl: 'https://drive.google.com/file/d/15vss-5qiyIj3Ak1jdh-iqbWubKpcSYDH/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc2"),
+        imgSrc: '/img/ImgDocs/CasaSollabelle.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1tePcCaj1fQsj73IDC5yIpoz3ogMG3I2T/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc3"),
+        imgSrc: '/img/ImgDocs/VillasMargarita.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc4"),
+        imgSrc: '/img/ImgDocs/VillasArcoiris.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1zZ8mzq_yudBado6hNyYjeH-C-ov4a5qj/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc5"),
+        imgSrc: '/img/ImgDocs/Chepinas.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1FxkeuDP2qdbLxQBzkboyvBajig4FINL4/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc6"),
+        imgSrc: '/img/ImgDocs/MasterPlan.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1d4AWUap89XrDRWh8ikyZTZafsK5-xPHx/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc7"),
+        imgSrc: '/img/ImgDocs/ListaDePrecios.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1ow9ncXb5k9UdhlwAK_XJWiJqAXXzC-8W/view', // Enlace de visualización
+        buttonText: 'Ver PDF'
+    },
+    {
+        title: t("inmo.doc8"),
+        imgSrc: '/img/ImgDocs/Comision.jpg',
+        fileUrl: 'https://docs.google.com/spreadsheets/d/1Ue2VIOW2n2J97JfanXRNXRvLRfsUBBj4/export?format=xlsx',
+        buttonText: 'Descargar Excel'
+    },
+    {
+        title: t("inmo.doc9"),
+        imgSrc: '/img/ImgDocs/CV.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1adCHkrTTFEuEqCMfl82Gz__fmiit4PYc/view', // Enlace de visualización
+        fileUrl2: 'https://drive.google.com/file/d/1ltE6lfElUYJu7c50yFMybyOoDtpDLNtM/view', // Enlace de visualización en inglés
+        buttonText: 'Ver PDF Español',
+        buttonText2: 'View PDF English'
+    },
+    {
+        title: t("inmo.doc10"),
+        imgSrc: '/img/ImgDocs/Brochure.jpg',
+        fileUrl: 'https://drive.google.com/file/d/1Zt9n2qtY0E6mpSaqcdsLA_3asOD1HHPg/view', // Enlace de visualización
+        fileUrl2: 'https://drive.google.com/file/d/1rIyf-k2103eKgKcC2UAyoGaJMiNdu2kT/view', // Enlace de visualización en inglés
+        buttonText: 'Ver PDF Español',
+        buttonText2: 'View PDF English'
+    }
+];
+
 ---
 
 
