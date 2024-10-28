@@ -3,12 +3,13 @@ import Card from './Card.astro';
 import i18next, { t } from "i18next";
 
 const data = [
+  /*
     {
         title: t("productos.title1"),
         description: t("productos.desc1"),
         imageUrl: "/img/Products/CasaSollabelle.jpg",
         link: "/Docs/FichasTecnicas/FichaTecnica_CasaModeloSollabelle.pdf"
-    },
+    },*/
     {
       title: t("productos.title2"),
       description: t("productos.desc2"),
@@ -78,7 +79,7 @@ const data = [
 
   @media (min-width: 1024px) {
     .grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 </style>

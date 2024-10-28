@@ -9,12 +9,13 @@ const cardData = [
         fileUrl: 'https://drive.google.com/file/d/15vss-5qiyIj3Ak1jdh-iqbWubKpcSYDH/view', // Enlace de visualización
         buttonText: 'Ver PDF'
     },
+    /*
     {
         title: t("inmo.doc2"),
         imgSrc: '/img/ImgDocs/CasaSollabelle.jpg',
         fileUrl: 'https://drive.google.com/file/d/1tePcCaj1fQsj73IDC5yIpoz3ogMG3I2T/view', // Enlace de visualización
         buttonText: 'Ver PDF'
-    },
+    },*/
     {
         title: t("inmo.doc3"),
         imgSrc: '/img/ImgDocs/VillasMargarita.jpg',
@@ -139,7 +140,7 @@ const cardData = [
         const modalContainer = document.getElementById('modal-container');
         const modalContent = document.getElementById('modal-content');
 
-        if (password === '123' || password === 'admin') {
+        if (password === '123' || password === 'admin' || password === 'RCSJC2024') {
             document.getElementById('auth-form')?.classList.add('hidden');
             noPasswordMsg?.classList.add('hidden');
             passwordPrompt?.classList.add('hidden');
