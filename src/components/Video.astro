@@ -1,3 +1,7 @@
+---
+import i18next, { t } from "i18next";
+---
+
 <style>
     .video-container {
         position: relative;
@@ -20,7 +24,7 @@
 <div class="bg-white p-6 shadow-md" id="VIDEO" >
     <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative"data-aos="fade-up"data-aos-easing="linear"
     data-aos-duration="500">
-        Casa Muestra
+        {t("video.title")}
         <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
       </h2>
     <div class="video-container" data-aos="fade-up"data-aos-easing="linear"

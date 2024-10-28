@@ -3,19 +3,24 @@
 import Modal from "./Modal.astro";
 
 const menuItems = [
-    { name: 'NOSOTROS', icon: '/img/IconosMenu/About.svg', href: '#NOSOTROS' },
-    { name: 'CASAS EN PREVENTA', icon: '/img/IconosMenu/Casas.svg', href: '#MODELOS' },
-    { name: 'CAMPO DE GOLF', icon: '/img/IconosMenu/Golf.svg', href: '#CAMPODEGOLF' },
-    { name: 'AMENIDADES', icon: '/img/IconosMenu/Amenidades.svg', href: '#AMENIDADES' },
-    { name: 'CASA MUESTRA', icon: '/img/IconosMenu/Video.svg', href: '#VIDEO' },
-    { name: 'CONTACTO', icon: '/img/IconosMenu/Contacto.svg', href: '#CONTACTO' },
+    { name: t("nav.item1"), icon: '/img/IconosMenu/About.svg', href: '#NOSOTROS' },
+    { name: t("nav.item2"), icon: '/img/IconosMenu/Casas.svg', href: '#MODELOS' },
+    { name: t("nav.item3"), icon: '/img/IconosMenu/Golf.svg', href: '#CAMPODEGOLF' },
+    { name: t("nav.item4"), icon: '/img/IconosMenu/Amenidades.svg', href: '#AMENIDADES' },
+    //{ name: t("nav.item5"), icon: '/img/IconosMenu/Video.svg', href: '#VIDEO' },
+    { name: t("nav.item6"), icon: '/img/IconosMenu/Restaurant.svg', href: '#REST1900' },
+    { name: t("nav.item7"), icon: '/img/IconosMenu/Contacto.svg', href: '#CONTACTO' },
 ];
+
+import i18next, { t } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import { LanguageSelector } from "astro-i18next/components";
 ---
 
 <!-- Botón flotante siempre visible -->
 <div class="fixed top-4 right-4 z-50">
-    <button id="menu-toggle" class="text-white bg-primary hover:bg-red-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-        Menu
+    <button id="menu-toggle" class="text-white bg-primary hover:bg-red-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ">
+        {t("nav.menu")}
     </button>
 </div>
 
@@ -40,7 +45,7 @@ const menuItems = [
         <!-- Botón verde "Inmobiliarias" -->
         <div class="mt-4">
             <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="w-full flex items-center justify-center text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none shadow-lg" >
-                Inmobiliarias
+                {t("nav.inmobi")}
             </button>
             <Modal/>
         </div>

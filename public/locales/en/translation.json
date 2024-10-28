@@ -1,0 +1,126 @@
+{
+  "layout": {
+    "title": "Royal County San José Chakán",
+    "description": "Selling houses in Yucatán"
+  },
+  "slider": {
+    "title1": "IN THE HEART OF MAYAN CULTURE",
+    "subtitle1": "Carretera Ixil km 1.5, Chicxulub Pueblo, Yucatán, Mexico.",
+    "title2": "A LUXURY PLACE",
+    "subtitle2": "Pre-sale of houses",
+    "title3": "LIVE IN HARMONY WITH NATURE",
+    "subtitle3": "Royal County San José Chakán",
+    "contbut": "Contact Us"
+  },
+  "nav": {
+    "menu": "Menu",
+    "item1": "ABOUT US",
+    "item2": "HOUSES FOR SALE",
+    "item3": "GOLF COURSE",
+    "item4": "AMENITIES",
+    "item5": "SHOW HOUSE",
+    "item6": "RESTAURANT 1900",
+    "item7": "CONTACT",
+    "inmobi": "REAL ESTATE"
+  },
+  "nosotros": {
+    "title": "About Us",
+    "descripcion1": "At Royal County San José Chakán, we are dedicated to offering a unique and exclusive lifestyle. Our team is committed to excellence, ensuring that every detail of your experience is perfect.",
+    "descripcion2": "From our luxurious residences to our top-notch facilities, we are here to make your dreams come true. Discover the difference of living in a place where every day is a new opportunity to enjoy the best.",
+    "cont": "Contact Us"
+  },
+  "productos": {
+    "title": "Available Models",
+    "title1": "SOLLABELLE HOUSE",
+    "desc1": "Spacious and comfortable areas",
+    "title2": "RAINBOW VILLAS",
+    "desc2": "Affordable and minimalist",
+    "title3": "MARGARITA VILLAS",
+    "desc3": "2-story model",
+    "title4": "HELENE HOUSE",
+    "desc4": "Luxurious and large",
+    "but": "Learn More"
+  },
+  "golf": {
+    "title": "Exclusive Golf Course",
+    "descripcion": "Discover the experience of living in a luxury residential with a golf course. Enjoy perfect greens and an unparalleled lifestyle. Our golf course is designed to offer you the best in entertainment and relaxation.",
+    "but": "Learn More",
+    "frase1": "9 complete holes",
+    "frase2": "Illuminated course",
+    "frase3": "24-hour availability",
+    "frase4": "Artificial lakes"
+  },
+  "ameni": {
+    "title": "Residential Amenities",
+    "club": "Hacienda-style Clubhouse",
+    "desc1": "The most exclusive for our members.",
+    "bar": "Bar",
+    "desc2": "The best drinks.",
+    "rest": "Restaurant",
+    "desc3": "Dos Reyes Restaurant, the best food.",
+    "mascot": "Pet Park",
+    "desc4": "For outdoor enjoyment.",
+    "golf": "Golf Course",
+    "desc5": "9 illuminated holes.",
+    "spa": "Spa",
+    "desc6": "Eternal Clinical, maximum relaxation.",
+    "pisci": "Swimming Pool",
+    "desc7": "Enjoy it at all times.",
+    "ciclo": "Bike Path",
+    "desc8": "For pleasant rides.",
+    "padel": "Padel Courts",
+    "desc9": "The sport of the moment.",
+    "tennis": "Tennis Courts",
+    "desc10": "For sports enthusiasts.",
+    "subt": "Underground Services",
+    "desc11": "Always functional.",
+    "acceso": "Controlled Access",
+    "desc12": "For maximum security.",
+    "urb": "Urban Gym",
+    "desc13": "Outdoor exercise.",
+    "capilla": "Chapel",
+    "desc14": "Perfect for believers.",
+    "gym": "Gym",
+    "desc15": "For physical strengthening."
+  },
+  "video": {
+    "title": "Show House"
+  },
+  "contacto": {
+    "title": "Contact",
+    "email": "Email",
+    "placeemail": "email@example.com",
+    "asunto": "Subject",
+    "placeasunto": "Example: More information",
+    "mensaje": "Message",
+    "placemensaje": "You can reach me at...",
+    "but": "Send"
+  },
+  "footer": {
+    "copy": "2024 Royal County San José Chakán. All rights reserved."
+  },
+  "inmo": {
+    "title": "Access More Information",
+    "intruc": "Enter your password",
+    "contra": "Your password",
+    "verifi": "Verify",
+    "preg": "Don't have a password? ",
+    "soli": "Request your password",
+    "confi": "Password verified, displaying information...",
+    "doc1": "Helene House Documentation",
+    "doc2": "Sollabelle House Documentation",
+    "doc3": "Margarita Villas Documentation",
+    "doc4": "Rainbow Villas Documentation",
+    "doc5": "Chepinas",
+    "doc6": "Master Plan",
+    "doc7": "Price List",
+    "doc8": "Commission Charge Form",
+    "doc9": "Builder's Curriculum",
+    "doc10": "Brochure"
+  },
+  "rest": {
+      "title": "RESTAURANT 1900",
+      "descripcion": "Located in the majestic San José Chakán hacienda, Restaurant 1900 offers an unparalleled culinary experience, blending the best of traditional Mexican, French, Greek, and Mediterranean cuisine with modern touches.\nOur dishes are prepared with fresh, local ingredients, highlighting authentic flavors in every bite. From our spacious terraces, you can enjoy spectacular views while savoring\nour dishes in a cozy, rustic atmosphere, inspired by the architecture of old Mexican haciendas. With décor that evokes the elegance of past times and exceptional service,\nRestaurant 1900 invites you to an experience that delights all the senses.",
+      "buto": "Download Menu"
+  }
+}
