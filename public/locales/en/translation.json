@@ -30,14 +30,14 @@
     "cont": "Contact Us"
   },
   "productos": {
-    "title": "Available Models",
+    "title": "Products",
     "title1": "SOLLABELLE HOUSE",
     "desc1": "Spacious and comfortable areas",
     "title2": "RAINBOW VILLAS",
     "desc2": "Affordable and minimalist",
     "title3": "MARGARITA VILLAS",
     "desc3": "2-story model",
-    "title4": "HELENE HOUSE",
+    "title4": "HELENE MODEL",
     "desc4": "Luxurious and large",
     "but": "Learn More"
   },
@@ -45,14 +45,14 @@
     "title": "Exclusive Golf Course",
     "descripcion": "Discover the experience of living in a luxury residential with a golf course. Enjoy perfect greens and an unparalleled lifestyle. Our golf course is designed to offer you the best in entertainment and relaxation.",
     "but": "Learn More",
-    "frase1": "9 complete holes",
+    "frase1": "9 holes",
     "frase2": "Illuminated course",
     "frase3": "24-hour availability",
     "frase4": "Artificial lakes"
   },
   "ameni": {
     "title": "Residential Amenities",
-    "club": "Hacienda-style Clubhouse",
+    "club": "Club House - Hacienda from the year 1900",
     "desc1": "The most exclusive for our members.",
     "bar": "Bar",
     "desc2": "The best drinks.",
@@ -107,7 +107,7 @@
     "preg": "Don't have a password? ",
     "soli": "Request your password",
     "confi": "Password verified, displaying information...",
-    "doc1": "Helene House Documentation",
+    "doc1": "Helene Model Documentation",
     "doc2": "Sollabelle House Documentation",
     "doc3": "Margarita Villas Documentation",
     "doc4": "Rainbow Villas Documentation",

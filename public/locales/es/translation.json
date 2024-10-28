@@ -30,14 +30,14 @@
       "cont":"Contáctanos"
     },
     "productos":{
-        "title": "Modelos Disponibles",
+        "title": "Productos",
         "title1": "CASA SOLLABELLE",
         "desc1": "Areas amplias y comodas",
         "title2": "VILLAS ARCOIRIS",
         "desc2": "Accesible y minimalista",
         "title3": "VILLAS MARGARITA",
         "desc3": "Modelo de 2 pisos",
-        "title4": "CASA HELENE",
+        "title4": "MODELo HELENE",
         "desc4": "Lujosa y grande",
         "but": "Conocer"
     },
@@ -45,14 +45,14 @@
         "title": "Exclusivo Campo de Golf",
         "descripcion": "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.",
         "but":"Conoce más",
-        "frase1": "9 hoyos completos",
+        "frase1": "9 hoyos",
         "frase2": "Campo iluminado",
         "frase3": "Disponibilidad 24 hrs",
         "frase4": "Lagos artificiales"
     },
     "ameni":{
         "title": "Amenidades del Residencial",
-        "club": "Casa Club tipo Hacienda",
+        "club": "Casa Club - Hacienda del año 1900",
         "desc1": "Lo mas exclusivo para nuestros miembros.",
         "bar": "Bar",
         "desc2": "Las mejores bebidas.",
@@ -107,7 +107,7 @@
         "preg": "¿No cuentas con contraseña? ",
         "soli": "Solicita tu contraseña",
         "confi": "Contraseña verificada, mostrando la información...",
-        "doc1": "Documentación Casa Helene",
+        "doc1": "Documentación Modelo Helene",
         "doc2": "Documentación Casa Sollabelle",
         "doc3": "Documentación Villas Margarita",
         "doc4": "Documentación Villas Arcoiris",
