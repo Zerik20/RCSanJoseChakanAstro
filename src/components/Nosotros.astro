@@ -12,7 +12,7 @@ import i18next, { t } from "i18next";
       <p class="nosotros-description">
         {t("nosotros.descripcion2")}
       </p>
-      <a href="/contacto" class="nosotros-button">{t("nosotros.cont")}</a>
+      <a href="#CONTACTO" class="nosotros-button">{t("nosotros.cont")}</a>
     </div>
     <div class="nosotros-image" data-aos="fade-left"data-aos-easing="linear"
     data-aos-duration="1500">
@@ -58,31 +58,36 @@ import i18next, { t } from "i18next";
   }
   
   .nosotros-content {
-    max-width: 45%;
-    margin-right: 2rem; /* Espacio entre texto e imagen */
-  }
+  display: flex;
+  flex-direction: column; /* Para mantener el texto arriba y el botón abajo */
+  align-items: center; /* Centra horizontalmente el contenido */
+}
   
   .nosotros-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .nosotros-description {
     font-size: 1.125rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .nosotros-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    @apply bg-primary;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s; /* Animación de color y escala */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  @apply bg-primary;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s; /* Animación de color y escala */
+  margin: 0 auto; /* Centrado horizontal */
   }
+
   
   .nosotros-button:hover {
     @apply bg-red-900;
