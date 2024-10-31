@@ -1,26 +1,25 @@
 ---
 import i18next, { t } from "i18next";
+
+const descripcion2 = t("nosotros.descripcion2");
 ---
 
 <section class="nosotros-section" id="NOSOTROS">
-    <div class="nosotros-content"data-aos="fade-right"data-aos-easing="linear"
-    data-aos-duration="1500">
-      <h2 class="nosotros-title">{t("nosotros.title")}</h2>
-      <p class="nosotros-description">
-        {t("nosotros.descripcion1")}
-      </p>
-      <p class="nosotros-description">
-        {t("nosotros.descripcion2")}
-      </p>
-      <a href="#CONTACTO" class="nosotros-button">{t("nosotros.cont")}</a>
-    </div>
-    <div class="nosotros-image" data-aos="fade-left"data-aos-easing="linear"
-    data-aos-duration="1500">
-      <img src="/img/Fachada.jpg" alt="Imagen representativa de nosotros" />
-    </div>
-  </section>
-  
-  <style>
+  <div class="nosotros-content" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+    <h2 class="nosotros-title">{t("nosotros.title")}</h2>
+    <p class="nosotros-description">
+      {t("nosotros.descripcion1")}
+    </p>
+    <!-- Usa set:html para renderizar el HTML en la segunda descripción -->
+    <p class="nosotros-description" set:html={descripcion2}></p>
+    <a href="#CONTACTO" class="nosotros-button">{t("nosotros.cont")}</a>
+  </div>
+  <div class="nosotros-image" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+    <img src="/img/Fachada.jpg" alt="Imagen representativa de nosotros" />
+  </div>
+</section>
+
+<style>
   .nosotros-section {
     display: flex;
     justify-content: space-between;
@@ -31,7 +30,7 @@ import i18next, { t } from "i18next";
     height: 100vh; /* Altura completa de la ventana de visualización */
     overflow: hidden; /* Asegura que la imagen de fondo no se desborde */
   }
-  
+
   .nosotros-section::before {
     content: "";
     position: absolute;
@@ -46,62 +45,60 @@ import i18next, { t } from "i18next";
     z-index: 0;
     animation: backgroundMove 30s linear infinite; /* Movimiento en loop */
   }
-  
+
   @keyframes backgroundMove {
     0% { background-position: 0 0; }
     100% { background-position: 100% 100%; }
   }
-  
+
   .nosotros-content, .nosotros-image {
     position: relative;
     z-index: 1;
   }
-  
+
   .nosotros-content {
-  display: flex;
-  flex-direction: column; /* Para mantener el texto arriba y el botón abajo */
-  align-items: center; /* Centra horizontalmente el contenido */
-}
-  
+    display: flex;
+    flex-direction: column; /* Para mantener el texto arriba y el botón abajo */
+    align-items: center; /* Centra horizontalmente el contenido */
+  }
+
   .nosotros-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
   }
-  
+
   .nosotros-description {
     font-size: 1.125rem;
     margin-bottom: 1rem;
     text-align: center;
   }
-  
+
   .nosotros-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  @apply bg-primary;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: background-color 0.3s, transform 0.3s; /* Animación de color y escala */
-  margin: 0 auto; /* Centrado horizontal */
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    @apply bg-primary;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s; /* Animación de color y escala */
+    margin: 0 auto; /* Centrado horizontal */
   }
 
-  
   .nosotros-button:hover {
     @apply bg-red-900;
     transform: scale(1.05); /* Escala al pasar el mouse */
   }
-  
+
   .nosotros-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s; /* Animación de escala */
   }
-  
-  
+
   /* Ajustes para pantallas pequeñas */
   @media (max-width: 768px) {
     .nosotros-section {
@@ -109,25 +106,23 @@ import i18next, { t } from "i18next";
       text-align: center;
       height: auto; /* Permite altura automática en pantallas pequeñas */
     }
-  
+
     .nosotros-content {
       max-width: 100%;
       margin-bottom: 2rem;
       margin-right: 0;
     }
-  
+
     .nosotros-image {
       max-width: 100%;
+      margin-left: 2rem; /* Espacio a la izquierda entre la imagen y el texto */
     }
-    .nosotros-image {
-  margin-left: 2rem; /* Espacio a la izquierda entre la imagen y el texto */
-}
   }
+
   .nosotros-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 2rem; /* Espacio a la derecha entre el texto y la imagen */
-}
-  </style>
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem; /* Espacio a la derecha entre el texto y la imagen */
+  }
+</style>
