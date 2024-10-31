@@ -25,20 +25,20 @@
   },
   "nosotros": {
     "title": "About Us",
-    "descripcion1": "At Royal County San José Chakán, we are dedicated to offering a unique and exclusive lifestyle. Our team is committed to excellence, ensuring that every detail of your experience is perfect.",
-    "descripcion2": "From our luxurious residences to our top-notch facilities, we are here to make your dreams come true. Discover the difference of living in a place where every day is a new opportunity to enjoy the best.",
+    "description1": "At Royal County San José Chakán, we are dedicated to offering a unique and exclusive lifestyle. Our team is committed to excellence, ensuring that every detail of your experience is perfect.",
+    "description2": "From our luxurious residences to our unique facilities that blend colonial and modern styles, we are here to make your dreams come true.",
     "cont": "Contact Us"
   },
   "productos": {
     "title": "Products",
-    "title1": "SOLLABELLE HOUSE",
-    "desc1": "Spacious and comfortable areas",
+    "title1": "SOLLABELLE RESIDENCE",
+    "desc1": "Hig-End Residence",
     "title2": "RAINBOW VILLAS",
-    "desc2": "Affordable and minimalist",
+    "desc2": "Minimalist",
     "title3": "MARGARITA VILLAS",
-    "desc3": "2-story model",
-    "title4": "HELENE MODEL",
-    "desc4": "Luxurious and large",
+    "desc3": "Town house",
+    "title4":"HELENE RESIDENCE",
+    "desc4": "Hig-End Residence",
     "but": "Learn More"
   },
   "golf": {
