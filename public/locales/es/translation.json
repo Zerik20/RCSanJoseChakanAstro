@@ -4,7 +4,7 @@
       "description": "Venta de casas en Yucatán"
     },
     "slider": {
-      "title1": "BIENVENIDO A ROYAL COUNTY SAN JOSÉ CHAKÁN",
+      "title1": "BIENVENIDO A<br>ROYAL COUNTY SAN JOSÉ CHAKÁN",
       "subtitle1": "",
       "title2": "UN LUGAR DE LUJO",
       "subtitle2": "Preventa de casas",
@@ -14,7 +14,7 @@
     },
     "nav": {
       "menu": "Menú",
-      "item1": "NOSOTROS",
+      "item1": "PROYECTO",
       "item2": "CASAS EN PREVENTA",
       "item3": "CAMPO DE GOLF",
       "item4": "AMENIDADES",
@@ -23,11 +23,12 @@
       "item7": "CONTACTO",
       "inmobi": "INMOBILIARIAS"
     },
-    "nosotros": {
-      "title": "Nosotros",
-      "descripcion1": "En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo. Nuestro equipo está comprometido con la excelencia, asegurando que cada detalle de tu experiencia sea perfecto.",
-      "descripcion2": "Desde nuestras <b>LUJOSAS RESIDENCIAS</b>, hasta nuestras instalaciones únicas que combinan lo colonial y lo moderno, estamos aquí para hacer realidad tus sueños.",
-      "cont":"Contáctanos"
+    "Proyecto": {
+      "title": "Proyecto",
+      "descripcion1": "En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo.",
+      "descripcion2": "Contamos con un master plan de 165 hectareas  con el 40% de reserva ecologica.",
+      "cont":"Contáctanos",
+      "ubi":"Ubicación"
     },
     "productos":{
         "title": "Productos",
