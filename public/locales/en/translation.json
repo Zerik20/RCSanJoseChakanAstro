@@ -1,127 +1,127 @@
 {
   "layout": {
     "title": "Royal County San José Chakán",
-    "description": "Venta de casas en Yucatán"
+    "description": "House sales in Yucatán"
   },
   "slider": {
-    "title1": "BIENVENIDO A<br>ROYAL COUNTY SAN JOSÉ CHAKÁN",
+    "title1": "WELCOME TO<br>ROYAL COUNTY SAN JOSÉ CHAKÁN",
     "subtitle1": "",
-    "title2": "UN LUGAR DE LUJO",
-    "subtitle2": "Preventa de casas",
-    "title3": "VIVE EN ARMONÍA CON LA NATURALEZA",
+    "title2": "A PLACE OF LUXURY",
+    "subtitle2": "Pre-sale of houses",
+    "title3": "LIVE IN HARMONY WITH NATURE",
     "subtitle3": "Royal County San José Chakán",
-    "contbut": "Contáctanos"
+    "contbut": "Contact us"
   },
   "nav": {
-    "menu": "Menú",
-    "item1": "PROYECTO",
-    "item2": "CASAS EN PREVENTA",
-    "item3": "CAMPO DE GOLF",
-    "item4": "AMENIDADES",
-    "item5": "CASA MUESTRA",
+    "menu": "Menu",
+    "item1": "PROJECT",
+    "item2": "HOUSES IN PRE-SALE",
+    "item3": "GOLF COURSE",
+    "item4": "AMENITIES",
+    "item5": "SHOW HOUSE",
     "item6": "RESTAURANT 1900",
-    "item7": "CONTACTO",
-    "inmobi": "INMOBILIARIAS"
+    "item7": "CONTACT",
+    "inmobi": "REAL ESTATES"
   },
   "Proyecto": {
-    "title": "Proyecto",
-    "descripcion1": "En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo. Nuestro equipo está comprometido con la excelencia, asegurando que cada detalle de tu experiencia sea perfecto.",
-    "descripcion2": "Desde nuestras <b>LUJOSAS RESIDENCIAS</b>, hasta nuestras instalaciones únicas que combinan lo colonial y lo moderno, estamos aquí para hacer realidad tus sueños.",
-    "cont":"Contáctanos",
-    "ubi":"Ubicación"
+    "title": "Project",
+    "descripcion1": "At Royal County San José Chakán, we are dedicated to offering a unique and exclusive lifestyle.",
+    "descripcion2": "We have a master plan of 165 hectares with 40% ecological reserve.",
+    "cont": "Contact us",
+    "ubi": "Location"
   },
-  "productos":{
-      "title": "Productos",
-      "title1": "RESIDENCIA SOLLABELLE",
-      "desc1": "Hig-End Residence",
+  "productos": {
+      "title": "Products",
+      "title1": "LOTS",
+      "desc1": "Premium",
       "title2": "VILLAS ARCOIRIS",
-      "desc2": "Minimalista",
+      "desc2": "Minimalist",
       "title3": "VILLAS MARGARITA",
-      "desc3": "Town house",
-      "title4": "RESIDENCIA HELENE",
-      "desc4": "Hig-End Residence",
-      "but": "Conocer"
+      "desc3": "Townhouse",
+      "title4": "RESIDENCE HELENE",
+      "desc4": "High-End Residence",
+      "but": "Learn more"
   },
-  "golf":{
-      "title": "Exclusivo Campo de Golf",
-      "descripcion": "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.",
-      "but":"Conoce más",
-      "frase1": "9 hoyos",
-      "frase2": "Campo iluminado",
-      "frase3": "Disponibilidad 24 hrs",
-      "frase4": "Lagos artificiales"
+  "golf": {
+      "title": "Exclusive Golf Course",
+      "descripcion": "Discover the experience of living in a luxury residential area with a golf course. Enjoy perfect greens and an unparalleled lifestyle. Our golf course is designed to offer you the best in entertainment and relaxation.",
+      "but": "Learn more",
+      "frase1": "9 holes",
+      "frase2": "Illuminated course",
+      "frase3": "Available 24 hours",
+      "frase4": "Artificial lakes"
   },
-  "ameni":{
-      "title": "Amenidades del Residencial",
-      "club": "Casa Club - Hacienda del año 1900",
-      "desc1": "Lo mas exclusivo para nuestros miembros.",
+  "ameni": {
+      "title": "Residential Amenities",
+      "club": "Club House - Hacienda from 1900",
+      "desc1": "The most exclusive for our members.",
       "bar": "Bar",
-      "desc2": "Las mejores bebidas.",
-      "rest": "Restaurante",
-      "desc3": "Dos Reyes Restaurante, la mejor comida.",
-      "mascot": "Parque de mascotas",
-      "desc4": "Para disfrutar al aire libre.",
-      "golf": "Campo de Golf",
-      "desc5": "9 hoyos iluminados.",
+      "desc2": "The best drinks.",
+      "rest": "Restaurant",
+      "desc3": "Two Kings Restaurant, the best food.",
+      "mascot": "Pet park",
+      "desc4": "To enjoy outdoors.",
+      "golf": "Golf Course",
+      "desc5": "9 illuminated holes.",
       "spa": "Spa",
-      "desc6": "Eternal Clinical, la maxima relajación.",
-      "pisci": "Piscina",
-      "desc7": "Disfrutala en todo momento.",
-      "ciclo": "Ciclovia",
-      "desc8": "Para dar unos lindos paseos.",
-      "padel": "Canchas de padel",
-      "desc9": "El deporte de moda.",
-      "tennis": "Canchas de tennis",
-      "desc10": "Para los amantes del deporte.",
-      "subt": "Servicios Subterraneos",
-      "desc11": "Siempre funcional.",
-      "acceso": "Acceso controlado",
-      "desc12": "Para la maxima seguridad.",
-      "urb": "Gym Urbano",
-      "desc13": "Ejercicio al aire libre.",
-      "capilla": "Capilla",
-      "desc14": "Perfecto para los creyentes.",
-      "gym": "Gimnasio",
-      "desc15": "Para el fortalecimiento fisico."
+      "desc6": "Eternal Clinical, the ultimate relaxation.",
+      "pisci": "Pool",
+      "desc7": "Enjoy it at any time.",
+      "ciclo": "Bike path",
+      "desc8": "For beautiful walks.",
+      "padel": "Padel courts",
+      "desc9": "The sport of the moment.",
+      "tennis": "Tennis courts",
+      "desc10": "For sports lovers.",
+      "subt": "Underground services",
+      "desc11": "Always functional.",
+      "acceso": "Controlled access",
+      "desc12": "For maximum security.",
+      "urb": "Urban gym",
+      "desc13": "Outdoor exercise.",
+      "capilla": "Chapel",
+      "desc14": "Perfect for believers.",
+      "gym": "Gym",
+      "desc15": "For physical strengthening."
   },
-  "video":{
-      "title": "Casa Muestra"
+  "video": {
+      "title": "Show House"
   },
-  "contacto":{
-      "title": "Contacto",
+  "contacto": {
+      "title": "Contact",
       "email": "Email",
-      "placeemail": "email@ejemplo.com",
-      "asunto": "Asunto",
-      "placeasunto": "Ejemplo: Más informes",
-      "mensaje": "Mensaje",
-      "placemensaje": "Me puede contactar al...",
-      "but": "Enviar"
+      "placeemail": "email@example.com",
+      "asunto": "Subject",
+      "placeasunto": "Example: More information",
+      "mensaje": "Message",
+      "placemensaje": "You can contact me at...",
+      "but": "Send"
   },
-  "footer":{
-      "copy": "2024 Royal County San José Chakán. Todos los derechos reservados."
+  "footer": {
+      "copy": "2024 Royal County San José Chakán. All rights reserved."
   },
-  "inmo":{
-      "title": "Accede a más información",
-      "intruc": "Introduce tu contraseña",
-      "contra": "Tu contraseña",
-      "verifi": "Verificar",
-      "preg": "¿No cuentas con contraseña? ",
-      "soli": "Solicita tu contraseña",
-      "confi": "Contraseña verificada, mostrando la información...",
-      "doc1": "Documentación Modelo Helene",
-      "doc2": "Documentación Casa Sollabelle",
-      "doc3": "Documentación Villas Margarita",
-      "doc4": "Documentación Villas Arcoiris",
+  "inmo": {
+      "title": "Access more information",
+      "intruc": "Enter your password",
+      "contra": "Your password",
+      "verifi": "Verify",
+      "preg": "Don’t have a password?",
+      "soli": "Request your password",
+      "confi": "Password verified, showing information...",
+      "doc1": "Helene Model Documentation",
+      "doc2": "Sollabelle House Documentation",
+      "doc3": "Villas Margarita Documentation",
+      "doc4": "Villas Arcoiris Documentation",
       "doc5": "Chepinas",
       "doc6": "Master Plan",
-      "doc7": "Lista de Precios",
-      "doc8": "Formato de cobro de comisión",
-      "doc9": "Curriculum de la Constructora",
+      "doc7": "Price List",
+      "doc8": "Commission billing form",
+      "doc9": "Constructor Curriculum",
       "doc10": "Brochure"
   },
-    "rest": {
-      "title": "RESTAURANTE 1900",
-      "descripcion": "Ubicado en la majestuosa hacienda San José Chakán, donde tendras una experiencia culinaria inigualable, fusionando lo mejor de la gastronomía tradicional mexicana, francesa, griega y mediterránea con toques modernos.",
-      "buto": "Descargar Menú"
+  "rest": {
+      "title": "RESTAURANT 1900",
+      "descripcion": "Located in the majestic Hacienda San José Chakán, where you will have an unparalleled culinary experience, blending the best of traditional Mexican, French, Greek, and Mediterranean cuisine with modern touches.",
+      "buto": "Download Menu"
   }
 }

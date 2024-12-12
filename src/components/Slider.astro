@@ -19,10 +19,12 @@ const Title1 = t("slider.title1");
     </video>
   </div>
 
+  <!-- Logo centrado -->
   <div class="absolute top-0 left-0 right-0 flex justify-center p-4">
     <img src="/img/logoblanco.png" alt="Logo" class="w-40 h-auto" loading="eager">
   </div>
 
+  <!-- Contenido del slider -->
   <div class="relative h-full overflow-hidden">
     <div class="hidden h-full" data-carousel-item="active">
       <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
@@ -49,6 +51,7 @@ const Title1 = t("slider.title1");
     </div>
   </div>
 
+  <!-- Botones de navegación -->
   <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
     <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
       <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -73,21 +76,3 @@ const Title1 = t("slider.title1");
     {t("slider.contbut")}
   </button>
 </div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('background-video');
-    const preview = document.getElementById('video-preview');
-
-    if (video) {
-      video.addEventListener('loadeddata', () => {
-        if (preview) {
-          setTimeout(() => {
-            preview.classList.add('hidden'); // Usar clases en lugar de estilos inline
-          }, 2000);
-        }
-      });
-    }
-  });
-</script>
