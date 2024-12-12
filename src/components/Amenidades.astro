@@ -97,86 +97,54 @@ const amenities = [
 ---
 
 <div class="bg-white p-6 shadow-md" id="AMENIDADES">
-    <h2 id="TituloAmenidades" class="text-4xl font-extrabold text-center text-black mb-8 relative"data-aos="fade-up"data-aos-easing="linear"
-    data-aos-duration="500">
-      {t("ameni.title")}
-      <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
-    </h2>
-  
-    <!-- Imagen Grande con Degradado en la Parte Inferior -->
-    <div class="w-full flex justify-center mb-4">
-      <div class="relative w-full"data-aos="fade-up"data-aos-easing="linear"
-      data-aos-duration="500">
-        <img id="main-image" src={amenities[0].image} alt="Amenidad seleccionada" class="w-full h-96 object-cover rounded-lg" />
-        <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent text-white p-4 flex flex-col justify-end rounded-lg">
-          <h3 id="image-title" class="text-2xl font-semibold">{amenities[0].name}</h3>
-          <p id="image-description" class="mt-2 text-lg">{amenities[0].description}</p>
+  <h2
+    class="text-4xl font-extrabold text-center text-black mb-8 relative"
+    data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="500"
+  >
+    {t("ameni.title")}
+    <span class="block w-24 mx-auto mt-4 h-1 bg-gray-200 rounded-full"></span>
+  </h2>
+
+  <!-- Contenedor de Amenidades -->
+  <div
+    class="flex flex-wrap justify-center gap-10"
+    data-aos="fade-up"
+    data-aos-easing="linear"
+    data-aos-duration="500"
+  >
+    {amenities.map((amenity) => (
+      <div
+        class="flex flex-col items-center space-y-2 w-32"
+      >
+        <div class="w-12 h-12 bg-gray-200 rounded-md flex items-center justify-center">
+          <img src={amenity.icon} alt={amenity.name} class="w-6 h-6" />
         </div>
+        <h3 class="text-base font-semibold text-gray-700 text-center">{amenity.name}</h3>
       </div>
-    </div>
-  
-    <!-- Botón para mostrar/ocultar la lista -->
-    <button id="toggle-list" class="block w-full py-2 px-4 bg-primary text-white rounded-lg mb-4">
-      Mostrar Amenidades
-    </button>
-  
-    <!-- Contenedor de Lista Horizontal -->
-    <div class="w-full overflow-x-auto hidden" id="amenities-list">
-      <ul class="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-        {amenities.map((amenity) => (
-          <li
-            class="flex-shrink-0 flex items-center space-x-4 p-2 cursor-pointer rounded-lg hover:bg-gray-100 transition"
-            data-image={amenity.image}
-            data-name={amenity.name}
-            data-description={amenity.description}
-          >
-            <img src={amenity.icon} alt={amenity.name} class="w-8 h-8" />
-            <div>
-              <h3 class="text-lg font-semibold">{amenity.name}</h3>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    ))}
   </div>
-  
-  <!-- Script para cambiar la imagen y mostrar/ocultar la lista -->
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-      const mainImage = document.getElementById('main-image');
-      const imageTitle = document.getElementById('image-title');
-      const imageDescription = document.getElementById('image-description');
-      const listItems = document.querySelectorAll('#amenities-list li');
-      const toggleButton = document.getElementById('toggle-list');
-      const amenitiesList = document.getElementById('amenities-list');
-  
-      listItems.forEach(item => {
-        item.addEventListener('click', function () {
-          const imageSrc = this.getAttribute('data-image');
-          const name = this.getAttribute('data-name');
-          const description = this.getAttribute('data-description');
-          mainImage.src = imageSrc;
-          imageTitle.textContent = name;
-          imageDescription.textContent = description;
-  
-          // Cierra la lista después de seleccionar un ítem
-          amenitiesList.classList.add('hidden');
-          toggleButton.textContent = 'Mostrar Amenidades';
-  
-          // Hacer scroll hacia la imagen
-          window.scrollTo({
-            top: document.querySelector('#TituloAmenidades').offsetTop,
-            behavior: 'smooth'
-          });
-        });
-      });
-  
-      toggleButton.addEventListener('click', function () {
-        const isHidden = amenitiesList.classList.contains('hidden');
-        amenitiesList.classList.toggle('hidden', !isHidden);
-        toggleButton.textContent = isHidden ? 'Ocultar Amenidades' : 'Mostrar Amenidades';
-      });
-    });
-  </script>
+</div>
+
+
+<style>
+  #AMENIDADES {
+    background-color: #f9f9f9;
+  }
+
+  h2 span {
+    background-color: #e0e0e0;
+  }
+
+  .flex div {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .flex div:hover {
+    transform: scale(1.05);
+  }
+</style>
+
   
   
