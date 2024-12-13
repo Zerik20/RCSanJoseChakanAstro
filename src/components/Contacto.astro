@@ -1,32 +1,152 @@
 ---
 import i18next, { t } from "i18next";
 ---
-
-<div class="p-5" id="CONTACTO" style="background-color:white;">
-    <h1 class="text-4xl font-bold text-center mb-4" data-aos="zoom-in-up">{t("contacto.title")}</h1>
-    <form class="max-w-sm mx-auto" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
-        <label data-aos="fade-up" data-aos-offset="100" for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t("contacto.email")}</label>
-        <div data-aos="fade-up" data-aos-offset="100" class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-                </svg>
-            </div>
-            <input type="email" name="email" id="email-address-icon" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder={t("contacto.placeemail")} />
-        </div>
-        <br />
-        <div class="mb-5">
-            <label data-aos="fade-up" data-aos-offset="100" for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t("contacto.asunto")}</label>
-            <input data-aos="fade-up" data-aos-offset="100" type="text" name="subject" id="subject" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder={t("contacto.placeasunto")} />
-        </div>
+<div class="p-10 bg-white" id="CONTACTO">
+    <h1 class="text-2xl font-bold text-center mb-8 text-gray-900">{t("contacto.title")}</h1>
+    <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
+        <!-- Nombre -->
         <div>
-            <label data-aos="fade-up" data-aos-offset="100" for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t("contacto.mensaje")}</label>
-            <textarea data-aos="fade-up" data-aos-offset="100" name="message" id="message" rows="4" required class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder={t("contacto.placemensaje")}></textarea>
+            <label for="nombre" class="block text-sm font-medium text-gray-900">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5" placeholder="Ingresa tu nombre" />
         </div>
-        <br />
-        <div data-aos="fade-up" data-aos-offset="100" class="flex justify-center">
-            <button type="submit" class="text-white bg-primary hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{t("contacto.but")}</button>
+
+        <!-- Apellidos -->
+        <div>
+            <label for="apellidos" class="block text-sm font-medium text-gray-900">Apellidos *</label>
+            <input type="text" id="apellidos" name="apellidos" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5" placeholder="Ingresa tus apellidos" />
+        </div>
+
+        <!-- Número telefónico -->
+        <div>
+            <label for="telefono" class="block text-sm font-medium text-gray-900">Número telefónico *</label>
+            <input type="tel" id="telefono" name="telefono" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5" placeholder="Ingresa tu teléfono" />
+        </div>
+
+        <!-- Correo -->
+        <div>
+            <label for="correo" class="block text-sm font-medium text-gray-900">Correo *</label>
+            <input type="email" id="correo" name="correo" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5" placeholder="Ingresa tu correo electrónico" />
+        </div>
+
+        <!-- País -->
+        <div>
+            <label for="pais" class="block text-sm font-medium text-gray-900">País *</label>
+            <select id="pais" name="pais" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+        </div>
+
+        <!-- Estado -->
+        <div>
+            <label for="estado" class="block text-sm font-medium text-gray-900">Estado *</label>
+            <select id="estado" name="estado" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+        </div>
+
+        <!-- Ciudad -->
+        <div>
+            <label for="ciudad" class="block text-sm font-medium text-gray-900">Ciudad *</label>
+            <select id="ciudad" name="ciudad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+        </div>
+
+        <!-- Interés -->
+        <div>
+            <label for="interes" class="block text-sm font-medium text-gray-900">¿Estás interesado? *</label>
+            <select id="interes" name="interes" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5">
+                <option value="">Selecciona</option>
+                <option value="Preventa">Residencias</option>
+                <option value="Compra">Villas arcoiris</option>
+                <option value="Compra">Villas margarita</option>
+                <option value="Compra">Lotes</option>
+            </select>
+        </div>
+
+        <!-- Presupuesto -->
+        <div>
+            <label for="presupuesto" class="block text-sm font-medium text-gray-900">¿Cuál es tu presupuesto aproximado? *</label>
+            <select id="presupuesto" name="presupuesto" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5">
+                <option value="">Selecciona</option>
+                <option value="<100k">Menos de 4M</option>
+                <option value=">100k">Más de 4M</option>
+            </select>
+        </div>
+
+        <!-- Broker -->
+        <div>
+            <label for="broker" class="block text-sm font-medium text-gray-900">¿Eres broker?</label>
+            <select id="broker" name="broker" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5">
+                <option value="">Selecciona</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Botón de enviar -->
+        <div class="md:col-span-2 flex justify-center">
+            <button type="submit" class="text-white bg-red-800 hover:bg-red-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2.5 text-center">Enviar</button>
         </div>
     </form>
 </div>
+
+<script>
+    // Función para obtener el token de acceso de Universal Tutorial
+    async function obtenerToken() {
+        const respuesta = await fetch('https://www.universal-tutorial.com/api/getaccesstoken', {
+            method: 'GET',
+            headers: {
+                "Accept": "application/json",
+                "api-token": "pp6fzKpoR7jm2CTVpq6gIsZg3hD6uyZ3ZpgNabxXuClbwXVQ8USpw_JpF57qXu_VueY", // Reemplaza con tu token
+                "user-email": "erikaban14@gmail.com" // Reemplaza con tu correo
+            }
+        });
+
+        const datos = await respuesta.json();
+        return datos.auth_token;
+    }
+
+    // Función para cargar los datos (países, estados, ciudades)
+    async function cargarDatos() {
+        const paises = document.getElementById("pais");
+        const estados = document.getElementById("estado");
+        const ciudades = document.getElementById("ciudad");
+
+        const token = await obtenerToken(); // Obtiene el token para la API
+
+        // Función para cargar las opciones de los select
+        const cargarOpciones = async (url, elemento, propiedad) => {
+            try {
+                const respuesta = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Accept": "application/json"
+                    }
+                });
+
+                const datos = await respuesta.json();
+                elemento.innerHTML = '<option value="">Selecciona</option>';
+
+                datos.forEach(item => {
+                    elemento.innerHTML += `<option value="${item[propiedad]}">${item[propiedad]}</option>`;
+                });
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        };
+
+        // Cargar países desde la API
+        await cargarOpciones("https://www.universal-tutorial.com/api/countries", paises, "country_name");
+
+        // Cargar estados cuando se seleccione un país
+        paises.addEventListener("change", async () => {
+            await cargarOpciones(`https://www.universal-tutorial.com/api/states/${paises.value}`, estados, "state_name");
+            ciudades.innerHTML = '<option value="">Selecciona</option>'; // Limpiar ciudades
+        });
+
+        // Cargar ciudades cuando se seleccione un estado
+        estados.addEventListener("change", async () => {
+            await cargarOpciones(`https://www.universal-tutorial.com/api/cities/${estados.value}`, ciudades, "city_name");
+        });
+    }
+
+    // Ejecutar cuando el DOM esté completamente cargado
+    document.addEventListener("DOMContentLoaded", cargarDatos);
+</script>
+
