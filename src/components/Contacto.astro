@@ -103,14 +103,18 @@ import i18next, { t } from "i18next";
 
     // Función para cargar los datos (países, estados, ciudades)
     async function cargarDatos() {
-        const paises = document.getElementById("pais");
-        const estados = document.getElementById("estado");
-        const ciudades = document.getElementById("ciudad");
+        const paises = document.getElementById("pais") as HTMLSelectElement | null;
+        const estados = document.getElementById("estado") as HTMLSelectElement | null;
+        const ciudades = document.getElementById("ciudad") as HTMLSelectElement | null;
+        if (!paises || !estados || !ciudades) {
+            console.error("Error: No se encontraron algunos elementos del DOM.");
+            return;
+        }
 
         const token = await obtenerToken(); // Obtiene el token para la API
 
         // Función para cargar las opciones de los select
-        const cargarOpciones = async (url, elemento, propiedad) => {
+        const cargarOpciones = async (url: string, elemento: HTMLSelectElement, propiedad: string) => {
             try {
                 const respuesta = await fetch(url, {
                     method: 'GET',
@@ -120,7 +124,7 @@ import i18next, { t } from "i18next";
                     }
                 });
 
-                const datos = await respuesta.json();
+                const datos: any[] = await respuesta.json();
                 elemento.innerHTML = '<option value="">Selecciona</option>';
 
                 datos.forEach(item => {
