@@ -53,13 +53,13 @@
   },
   "ameni": {
       "title": "Commodités du Résidentiel",
-      "club": "Maison Club - Hacienda de l'année 1900",
+      "club": "Maison Club Hacienda de l'année 1900",
       "desc1": "Le plus exclusif pour nos membres.",
       "bar": "Bar",
       "desc2": "Les meilleures boissons.",
       "rest": "Restaurant",
       "desc3": "Deux Rois Restaurant, la meilleure cuisine.",
-      "mascot": "Parc pour animaux",
+      "mascot": "Pet park",
       "desc4": "Pour profiter de l'extérieur.",
       "golf": "Terrain de Golf",
       "desc5": "9 trous éclairés.",
@@ -82,7 +82,8 @@
       "capilla": "Chapelle",
       "desc14": "Parfait pour les croyants.",
       "gym": "Salle de sport",
-      "desc15": "Pour le renforcement physique."
+      "desc15": "Pour le renforcement physique.",
+      "pur": "Cigar lounge"
   },
   "video": {
       "title": "Maison Témoin"

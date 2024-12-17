@@ -53,7 +53,7 @@
   },
   "ameni": {
       "title": "Residential Amenities",
-      "club": "Club House - Hacienda from 1900",
+      "club": "Club House Hacienda from 1900",
       "desc1": "The most exclusive for our members.",
       "bar": "Bar",
       "desc2": "The best drinks.",
@@ -82,7 +82,8 @@
       "capilla": "Chapel",
       "desc14": "Perfect for believers.",
       "gym": "Gym",
-      "desc15": "For physical strengthening."
+      "desc15": "For physical strengthening.",
+      "pur": "Cigar lounge"
   },
   "video": {
       "title": "Show House"

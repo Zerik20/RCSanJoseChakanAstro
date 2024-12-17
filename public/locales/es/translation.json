@@ -53,13 +53,13 @@
     },
     "ameni":{
         "title": "Amenidades del Residencial",
-        "club": "Casa Club - Hacienda del año 1900",
+        "club": "Casa Club Hacienda del año 1900",
         "desc1": "Lo mas exclusivo para nuestros miembros.",
         "bar": "Bar",
         "desc2": "Las mejores bebidas.",
         "rest": "Restaurante",
         "desc3": "Dos Reyes Restaurante, la mejor comida.",
-        "mascot": "Parque de mascotas",
+        "mascot": "Pet park",
         "desc4": "Para disfrutar al aire libre.",
         "golf": "Campo de Golf",
         "desc5": "9 hoyos iluminados.",
@@ -82,7 +82,8 @@
         "capilla": "Capilla",
         "desc14": "Perfecto para los creyentes.",
         "gym": "Gimnasio",
-        "desc15": "Para el fortalecimiento fisico."
+        "desc15": "Para el fortalecimiento fisico.",
+        "pur": "Cigar lounge"
     },
     "video":{
         "title": "Casa Muestra"
