@@ -1,0 +1,37 @@
+---
+// Props para imágenes
+interface Props {
+  desktopImage: string;
+  mobileImage: string;
+}
+
+const handleClose = () => {
+  document.getElementById("popup")?.classList.add("hidden");
+};
+---
+
+<div id="popup" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-md">
+    <div class="relative p-6 max-w-3xl md:max-w-5xl w-full max-h-[90%] text-center bg-transparent">
+      <!-- Botón de cierre pegado a la imagen -->
+      <button class="absolute top-2 right-2 text-4xl text-white bg-transparent border-none hover:text-gray-300" onclick="document.getElementById('popup')?.classList.add('hidden')">&times;</button>
+      
+      <picture>
+        <source srcset={Astro.props.desktopImage} media="(min-width: 769px)" />
+        <img src={Astro.props.mobileImage} alt="Popup Image" class="rounded-lg max-w-full max-h-[500px] h-auto mx-auto" />
+      </picture>
+      
+      <!-- Enlace (botón) con espacio para un link y acción para cerrar el popup -->
+      <a href="#CONTACTO" onclick="document.getElementById('popup')?.classList.add('hidden')" 
+         class="absolute bottom-8 left-1/2 transform -translate-x-1/2 md:bottom-12 md:left-auto md:right-[6rem] px-6 py-3 bg-red-700 text-white rounded-md hover:bg-red-600">
+        Contáctanos
+      </a>
+    </div>
+  </div>
+  
+  
+  
+
+  
+  
+  
+  

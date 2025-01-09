@@ -10,6 +10,7 @@ import Amenidades from "../../components/Amenidades.astro";
 import Contacto from "../../components/Contacto.astro";
 import Video from "../../components/Video.astro";
 import Rest1900 from "../../components/Rest1900.astro";
+import Anuncio from "../../components/Anuncio.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("fr");
@@ -24,7 +25,11 @@ changeLanguage("fr");
 		<Amenidades/>
 		<Rest1900/>
 		<Contacto/>	
-		<Footer/>
+		<Footer/>	
+		<Anuncio 
+  desktopImage="/img/Horizontal.png" 
+  mobileImage="/img/Vertical.png" 
+/>	
 	</main>
 </Layout>
 
