@@ -19,13 +19,27 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://sanjosechakan.com/" />
+		<meta property="og:title" content="San José Chakan - Residencial Privada de Lujo" />
+		<meta property="og:description" content="San José Chakan es una exclusiva residencial privada de lujo con campo de golf, diseñada para crear una comunidad única." />
+		<meta property="og:image" content="https://sanjosechakan.com/og-image.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://sanjosechakan.com/" />
+		<meta property="twitter:title" content="San José Chakan - Residencial Privada de Lujo" />
+		<meta property="twitter:description" content="San José Chakan es una exclusiva residencial privada de lujo con campo de golf, diseñada para crear una comunidad única." />
+		<meta property="twitter:image" content="https://sanjosechakan.com/og-image.jpg" />
 	</head>
 	<body>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script is:inline>
 			AOS.init();
-		  </script>
+		</script>
 		<slot />
 	</body>
 </html>

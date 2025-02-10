@@ -24,23 +24,23 @@
       "inmobi": "INMOBILIARIAS"
     },
     "Proyecto": {
-      "title": "Proyecto",
-      "descripcion1": "En Royal County San José Chakán, nos dedicamos a ofrecer un estilo de vida único y exclusivo.",
+      "title": "BIENVENIDO A ROYAL COUNTY SAN JOSÉ",
+      "descripcion1": "ROYAL COUNTY SAN JOSÉ es la mejor comunidad para residir en México. 400 familias disfrutarán de un amplio entorno natural de más de 160 hectáreas, completamente planificado y equipado con todas las comodidades y servicios requeridos para no tener que salir de casa.",
       "descripcion2": "Contamos con un master plan de 165 hectáreas  con el 40% de reserva ecológica.",
       "cont":"Contáctanos",
       "ubi":"Ubicación"
     },
     "productos":{
-        "title": "Productos",
-        "title1": "LOTES",
+        "title": "Vive en Royal County",
+        "title1": "TERRENOS",
         "desc1": "Premium",
         "title2": "VILLAS ARCOIRIS",
         "desc2": "Minimalista",
-        "title3": "VILLAS MARGARITA",
+        "title3": "DEPARTAMENTOSs",
         "desc3": "Town house",
-        "title4": "RESIDENCIAS HELENE",
+        "title4": "RESIDENCIAS",
         "desc4": "Hig-End Residence",
-        "but": "Conocer"
+        "but": "Contáctanos"
     },
     "golf":{
         "title": "Exclusivo Campo de Golf",
