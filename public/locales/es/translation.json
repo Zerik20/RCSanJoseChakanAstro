@@ -25,7 +25,7 @@
     },
     "Proyecto": {
       "title": "BIENVENIDO A ROYAL COUNTY SAN JOSÉ",
-      "descripcion1": "ROYAL COUNTY SAN JOSÉ es la mejor comunidad para residir en México. 400 familias disfrutarán de un amplio entorno natural de más de 160 hectáreas, completamente planificado y equipado con todas las comodidades y servicios requeridos para no tener que salir de casa.",
+      "descripcion1":"<strong><em>ROYAL COUNTY SAN JOSÉ</em></strong> es la mejor comunidad para residir en México. 400 familias disfrutarán de un amplio entorno natural de más de 160 hectáreas, completamente planificado y equipado con todas las comodidades y servicios requeridos para no tener que salir de casa.",
       "descripcion2": "Contamos con un master plan de 165 hectáreas  con el 40% de reserva ecológica.",
       "cont":"Contáctanos",
       "ubi":"Ubicación"
@@ -36,7 +36,7 @@
         "desc1": "Premium",
         "title2": "VILLAS ARCOIRIS",
         "desc2": "Minimalista",
-        "title3": "DEPARTAMENTOSs",
+        "title3": "DEPARTAMENTOS",
         "desc3": "Town house",
         "title4": "RESIDENCIAS",
         "desc4": "Hig-End Residence",
@@ -44,7 +44,7 @@
     },
     "golf":{
         "title": "Exclusivo Campo de Golf",
-        "descripcion": "Descubre la experiencia de vivir en una residencial de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.",
+        "descripcion": "Descubre la experiencia de vivir en una residencia de lujo con un campo de golf. Disfruta de greens perfectos y un estilo de vida inigualable. Nuestro campo de golf está diseñado para ofrecerte lo mejor en entretenimiento y relajación.",
         "but":"Conoce más",
         "frase1": "9 hoyos",
         "frase2": "Campo iluminado",

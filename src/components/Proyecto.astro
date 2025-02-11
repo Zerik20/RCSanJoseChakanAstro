@@ -3,24 +3,43 @@ import i18next, { t } from "i18next";
 
 const descripcion2 = t("Proyecto.descripcion2");
 ---
+
 <section id="PROYECTO" class="relative flex flex-col md:flex-row items-center md:items-start justify-between p-8 bg-gradient-to-b from-white to-[#f7f3e9] h-auto md:h-[100vh]">
   <!-- Fondo con imagen -->
   <div class="absolute inset-0 bg-cover bg-center opacity-15 z-0" style="background-image: url('/img/Proyecto/Campo.jpg');"></div>
 
-  <!-- Contenido de texto -->
-  <div class="flex-1 z-10 p-4 text-center md:text-left space-y-4 pt-4 m-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#0c2e20]">{t("Proyecto.title")}</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">{t("Proyecto.descripcion1")}</p>
-    <!--p class="text-lg text-gray-700 leading-relaxed" set:html={descripcion2}></p-->
-    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
-      <a href="#CONTACTO" class="bg-primary text-white hover:bg-red-900 px-6 py-3 rounded-lg font-semibold transition duration-300">{t("Proyecto.cont")}</a>
-      <a href="https://maps.app.goo.gl/aRgs51r9dekXdGoY9" target="_blank" class="bg-primary text-white hover:bg-red-900 px-6 py-3 rounded-lg font-semibold transition duration-300">{t("Proyecto.ubi")}</a>
-    </div>
+<!-- Contenido de texto con logo encima del título -->
+<div class="flex-1 z-10 p-4 text-center md:text-left space-y-4 pt-4 m-auto">
+  <!-- Contenedor del logo -->
+  <div class="flex justify-center md:justify-center">
+    <img src="/logoNegro.png" alt="Logo" class="w-16 md:w-20" />
   </div>
 
-  <!-- Imagen del proyecto -->
-  <div class="flex-1 z-10 flex justify-center items-center p-4 relative overflow-hidden">
-    <img src="/img/Proyecto/Proyecto.jpg" alt="Imagen representativa de Proyecto" class="w-full max-w-[60%] h-auto object-contain rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" />
+  <!-- Título -->
+  <h2 class="text-3xl md:text-4xl font-bold text-[#0c2e20]">{t("Proyecto.title")}</h2>
+
+  <p class="text-lg text-gray-700 leading-relaxed" set:html={t("Proyecto.descripcion1")}></p>
+  <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
+    <a href="#CONTACTO" class="bg-primary text-white hover:bg-red-900 px-6 py-3 rounded-lg font-semibold transition duration-300">{t("Proyecto.cont")}</a>
+    <a href="https://maps.app.goo.gl/aRgs51r9dekXdGoY9" target="_blank" class="bg-primary text-white hover:bg-red-900 px-6 py-3 rounded-lg font-semibold transition duration-300">{t("Proyecto.ubi")}</a>
   </div>
+</div>
+
+
+<!-- Contenedor de imágenes una sobre otra -->
+<div class="flex-1 w-full p-4 flex flex-col space-y-6 items-center">
+  <!-- Imagen superior -->
+  <div class="w-full md:w-[80%]">
+    <img src="/img/Proyecto/Proyecto1.jpg" 
+         alt="Imagen representativa de Proyecto 1" 
+         class="w-full h-auto object-cover rounded-xl shadow-lg" />
+  </div>
+  
+  <!-- Imagen inferior -->
+  <div class="w-full md:w-[80%]">
+    <img src="/img/Proyecto/Proyecto2.jpg" 
+         alt="Imagen representativa de Proyecto 2" 
+         class="w-full h-auto object-cover rounded-xl shadow-lg" />
+  </div>
+</div>
 </section>
-
