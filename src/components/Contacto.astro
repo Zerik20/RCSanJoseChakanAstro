@@ -32,18 +32,21 @@ import i18next, { t } from "i18next";
         <div>
             <label for="pais" class="block text-sm font-medium text-gray-900">País *</label>
             <select id="pais" name="pais" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+            <input type="hidden" id="paisNombre" name="paisNombre" /> <!-- Campo oculto para el nombre del país -->
         </div>
 
         <!-- Estado -->
         <div>
             <label for="estado" class="block text-sm font-medium text-gray-900">Estado *</label>
             <select id="estado" name="estado" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+            <input type="hidden" id="estadoNombre" name="estadoNombre" /> <!-- Campo oculto para el nombre del estado -->
         </div>
 
         <!-- Ciudad -->
         <div>
             <label for="ciudad" class="block text-sm font-medium text-gray-900">Ciudad *</label>
             <select id="ciudad" name="ciudad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5"></select>
+            <input type="hidden" id="ciudadNombre" name="ciudadNombre" /> <!-- Campo oculto para el nombre de la ciudad -->
         </div>
 
         <!-- Interés -->
@@ -108,8 +111,11 @@ import i18next, { t } from "i18next";
         const paises = document.getElementById("pais") as HTMLSelectElement | null;
         const estados = document.getElementById("estado") as HTMLSelectElement | null;
         const ciudades = document.getElementById("ciudad") as HTMLSelectElement | null;
+        const paisNombre = document.getElementById("paisNombre") as HTMLInputElement | null;
+        const estadoNombre = document.getElementById("estadoNombre") as HTMLInputElement | null;
+        const ciudadNombre = document.getElementById("ciudadNombre") as HTMLInputElement | null;
 
-        if (!paises || !estados || !ciudades) {
+        if (!paises || !estados || !ciudades || !paisNombre || !estadoNombre || !ciudadNombre) {
             console.error("Error: No se encontraron algunos elementos del DOM.");
             return;
         }
@@ -161,17 +167,30 @@ import i18next, { t } from "i18next";
         // Cargar países al inicio
         await cargarPaises();
 
-        // Cargar estados cuando se seleccione un país
+        // Actualizar el nombre del país cuando se selecciona uno
         paises.addEventListener("change", async () => {
             const paisSeleccionado = paises.value;
+            const paisSeleccionadoNombre = paises.options[paises.selectedIndex].text;
+            if (paisNombre) paisNombre.value = paisSeleccionadoNombre; // Actualizar campo oculto
             await cargarEstados(paisSeleccionado);
             ciudades.innerHTML = '<option value="">Selecciona</option>'; // Limpiar ciudades
+            if (estadoNombre) estadoNombre.value = ""; // Limpiar nombre del estado
+            if (ciudadNombre) ciudadNombre.value = ""; // Limpiar nombre de la ciudad
         });
 
-        // Cargar ciudades cuando se seleccione un estado
+        // Actualizar el nombre del estado cuando se selecciona uno
         estados.addEventListener("change", async () => {
             const estadoSeleccionado = estados.value;
+            const estadoSeleccionadoNombre = estados.options[estados.selectedIndex].text;
+            if (estadoNombre) estadoNombre.value = estadoSeleccionadoNombre; // Actualizar campo oculto
             await cargarCiudades(estadoSeleccionado);
+            if (ciudadNombre) ciudadNombre.value = ""; // Limpiar nombre de la ciudad
+        });
+
+        // Actualizar el nombre de la ciudad cuando se selecciona una
+        ciudades.addEventListener("change", () => {
+            const ciudadSeleccionadoNombre = ciudades.options[ciudades.selectedIndex].text;
+            if (ciudadNombre) ciudadNombre.value = ciudadSeleccionadoNombre; // Actualizar campo oculto
         });
     }
 
