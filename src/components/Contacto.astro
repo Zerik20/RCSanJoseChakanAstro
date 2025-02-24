@@ -3,7 +3,7 @@ import i18next, { t } from "i18next";
 ---
 <div class="p-10 bg-white" id="CONTACTO">
     <h1 class="text-2xl font-bold text-center mb-8 text-gray-900">{t("contacto.title")}</h1>
-    <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formsubmit.co/25f509882166613c0f4ff0fabd9ada2a" method="POST">
+    <form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6" action="https://formsubmit.co/ventas@sanjosechakan.com" method="POST">
         <!-- Nombre -->
         <div>
             <label for="nombre" class="block text-sm font-medium text-gray-900">Nombre *</label>
@@ -51,10 +51,9 @@ import i18next, { t } from "i18next";
             <label for="interes" class="block text-sm font-medium text-gray-900">¿Estás interesado? *</label>
             <select id="interes" name="interes" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm p-2.5">
                 <option value="">Selecciona</option>
-                <option value="Preventa">Residencias</option>
-                <option value="Compra">Villas arcoiris</option>
-                <option value="Compra">Villas margarita</option>
-                <option value="Compra">Lotes</option>
+                <option value="Residencias">Residencias</option>
+                <option value="Departamentos">Departamentos</option>
+                <option value="Terrenos">Terrenos</option>
             </select>
         </div>
 
@@ -86,67 +85,93 @@ import i18next, { t } from "i18next";
 </div>
 
 <script>
-    // Función para obtener el token de acceso de Universal Tutorial
-    async function obtenerToken() {
-        const respuesta = await fetch('https://www.universal-tutorial.com/api/getaccesstoken', {
-            method: 'GET',
-            headers: {
-                "Accept": "application/json",
-                "api-token": "pp6fzKpoR7jm2CTVpq6gIsZg3hD6uyZ3ZpgNabxXuClbwXVQ8USpw_JpF57qXu_VueY", // Reemplaza con tu token
-                "user-email": "erikaban14@gmail.com" // Reemplaza con tu correo
-            }
-        });
-
-        const datos = await respuesta.json();
-        return datos.auth_token;
+    // Definir tipos para los datos JSON
+    interface Pais {
+        id: number;
+        name: string;
     }
 
-    // Función para cargar los datos (países, estados, ciudades)
+    interface Estado {
+        id: number;
+        id_country: number;
+        name: string;
+    }
+
+    interface Ciudad {
+        id: number;
+        id_state: number;
+        name: string;
+    }
+
+    // Función para cargar los datos desde los archivos JSON
     async function cargarDatos() {
         const paises = document.getElementById("pais") as HTMLSelectElement | null;
         const estados = document.getElementById("estado") as HTMLSelectElement | null;
         const ciudades = document.getElementById("ciudad") as HTMLSelectElement | null;
+
         if (!paises || !estados || !ciudades) {
             console.error("Error: No se encontraron algunos elementos del DOM.");
             return;
         }
 
-        const token = await obtenerToken(); // Obtiene el token para la API
-
-        // Función para cargar las opciones de los select
-        const cargarOpciones = async (url: string, elemento: HTMLSelectElement, propiedad: string) => {
+        // Cargar países desde el archivo JSON
+        const cargarPaises = async () => {
             try {
-                const respuesta = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        "Authorization": `Bearer ${token}`,
-                        "Accept": "application/json"
-                    }
-                });
-
-                const datos: any[] = await respuesta.json();
-                elemento.innerHTML = '<option value="">Selecciona</option>';
-
-                datos.forEach(item => {
-                    elemento.innerHTML += `<option value="${item[propiedad]}">${item[propiedad]}</option>`;
+                const respuesta = await fetch('/Lugares/countries.json');
+                const datos: { countries: Pais[] } = await respuesta.json();
+                paises.innerHTML = '<option value="">Selecciona</option>';
+                datos.countries.forEach((pais: Pais) => {
+                    paises.innerHTML += `<option value="${pais.id}">${pais.name}</option>`;
                 });
             } catch (error) {
-                console.error("Error al cargar los datos:", error);
+                console.error("Error al cargar los países:", error);
             }
         };
 
-        // Cargar países desde la API
-        await cargarOpciones("https://www.universal-tutorial.com/api/countries", paises, "country_name");
+        // Cargar estados desde el archivo JSON
+        const cargarEstados = async (paisSeleccionado: string) => {
+            try {
+                const respuesta = await fetch('/Lugares/states.json');
+                const datos: { states: Estado[] } = await respuesta.json();
+                estados.innerHTML = '<option value="">Selecciona</option>';
+                const estadosFiltrados = datos.states.filter((estado: Estado) => estado.id_country === parseInt(paisSeleccionado));
+                estadosFiltrados.forEach((estado: Estado) => {
+                    estados.innerHTML += `<option value="${estado.id}">${estado.name}</option>`;
+                });
+            } catch (error) {
+                console.error("Error al cargar los estados:", error);
+            }
+        };
+
+        // Cargar ciudades desde el archivo JSON
+        const cargarCiudades = async (estadoSeleccionado: string) => {
+            try {
+                const respuesta = await fetch('/Lugares/cities.json');
+                const datos: { cities: Ciudad[] } = await respuesta.json();
+                ciudades.innerHTML = '<option value="">Selecciona</option>';
+                const ciudadesFiltradas = datos.cities.filter((ciudad: Ciudad) => ciudad.id_state === parseInt(estadoSeleccionado));
+                ciudadesFiltradas.forEach((ciudad: Ciudad) => {
+                    ciudades.innerHTML += `<option value="${ciudad.id}">${ciudad.name}</option>`;
+                });
+            } catch (error) {
+                console.error("Error al cargar las ciudades:", error);
+            }
+        };
+
+        // Cargar países al inicio
+        await cargarPaises();
 
         // Cargar estados cuando se seleccione un país
         paises.addEventListener("change", async () => {
-            await cargarOpciones(`https://www.universal-tutorial.com/api/states/${paises.value}`, estados, "state_name");
+            const paisSeleccionado = paises.value;
+            await cargarEstados(paisSeleccionado);
             ciudades.innerHTML = '<option value="">Selecciona</option>'; // Limpiar ciudades
         });
 
         // Cargar ciudades cuando se seleccione un estado
         estados.addEventListener("change", async () => {
-            await cargarOpciones(`https://www.universal-tutorial.com/api/cities/${estados.value}`, ciudades, "city_name");
+            const estadoSeleccionado = estados.value;
+            await cargarCiudades(estadoSeleccionado);
         });
     }
 
